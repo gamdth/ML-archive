@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cài đặt</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/caidat.css') }}">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Ẩn thanh trượt */
+    }
+   
+  </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div data-layer="A_F_CaiDat" class="a_f_caidat">
+        <div data-layer="Rectangle 17" class="rectangle-17"></div>
+        <div data-layer="Rectangle 8" class="rectangle-8"></div>
+        <div data-layer="Rectangle 11" class="rectangle-11"></div>
+        <div data-layer="Quản lí dữ liệu" class="qun-l-d-liu"><span class="qunldliu_span">Quản lí dữ liệu</span></div>
+        <div data-layer="Rectangle 12" class="rectangle-12"></div>
+        <div data-layer="Thống kê và phân tích" class="thng-k-v-phn-tch"><span class="thngkvphntch_span">Thống kê và phân tích</span></div>
+        <div data-layer="Rectangle 14" class="rectangle-14"></div>
+        <div data-layer="Quản lí các chiến dịch" class="qun-l-cc-chin-dch"><span class="qunlccchindch_span">Quản lí các chiến dịch</span></div>
+        <div data-layer="Rectangle 13" class="rectangle-13"></div>
+        <div data-layer="Huấn luyện và dự đoán" class="hun-luyn-v-d-on"><span class="hunluynvdon_span">Huấn luyện và dự đoán</span></div>
+        <div data-layer="Rectangle 10" class="rectangle-10"></div>
+        <div data-layer="Tổng quan" class="tng-quan"><span class="tngquan_span">Tổng quan</span></div>
+        <div data-layer="Search bar" data-show-1st-trailing-icon="true" data-show-2nd-trailing-icon="false" data-show-avatar="False" data-show-leading-icon="true" data-state="Enabled" class="search-bar">
+            <div data-layer="state-layer" class="state-layer_01">
+            <div data-layer="Leading-icon" data-show-focus-indicator="false" data-size="Small" data-state="Enabled" data-type="Round" data-width="Default" class="leading-icon">
+                <div data-layer="Content" class="content">
+                <div data-layer="State-layer" class="state-layer">
+                    <div data-svg-wrapper data-layer="Icon" class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                    </svg>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div data-layer="Content" class="content_01">
+                <div data-layer="A_T_Search_ChucNang" class="a_t_search_chucnang"><span class="a_t_search_chucnang_span">Tìm kiếm chức năng</span></div>
+            </div>
+            <div data-layer="A_Icon_Search_ChucNang" class="a_icon_search_chucnang">
+                <div data-layer="1st trailing-icon" data-show-focus-indicator="false" data-size="Small" data-state="Enabled" data-type="Round" data-width="Default" class="instance-1st-trailing-icon">
+                <div data-layer="Content" class="content_02">
+                    <div data-layer="State-layer" class="state-layer_01">
+                    <div data-svg-wrapper data-layer="Icon" class="icon_01">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                        </svg>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="generic-avatar">
+            <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="62" height="63" rx="31" fill="var(--Schemes-Primary-Container, #EADDFF)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M40.3009 25.2C40.3009 30.4191 36.1371 34.65 31.0009 34.65C25.8646 34.65 21.7009 30.4191 21.7009 25.2C21.7009 19.9809 25.8646 15.75 31.0009 15.75C36.1371 15.75 40.3009 19.9809 40.3009 25.2ZM37.2009 25.2C37.2009 28.6794 34.425 31.5 31.0009 31.5C27.5767 31.5 24.8009 28.6794 24.8009 25.2C24.8009 21.7206 27.5767 18.9 31.0009 18.9C34.425 18.9 37.2009 21.7206 37.2009 25.2Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+            <path d="M31.0009 39.375C20.9656 39.375 12.4152 45.4047 9.1582 53.8525C9.95164 54.6531 10.7875 55.4103 11.662 56.1205C14.0873 48.3646 21.6958 42.525 31.0009 42.525C40.306 42.525 47.9144 48.3646 50.3398 56.1205C51.2143 55.4104 52.0501 54.6531 52.8435 53.8525C49.5865 45.4048 41.0362 39.375 31.0009 39.375Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+            </svg>
+        </div>
+        <div data-layer="Trang chủ" class="trang-ch"><span class="trangch_span">Trang chủ</span></div>
+        <div data-layer="Giới thiệu" class="gii-thiu"><span class="giithiu_span">Giới thiệu</span></div>
+        <div data-layer="Thông báo" class="thng-bo"><span class="thngbo_span">Thông báo</span></div>
+        <div data-layer="Hương" class="hng"><span class="hng_span">Hương</span></div>
+        <img data-layer="image 2" class="image-2" src="data:image/png;base64,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" />
+        <div data-layer="Slogan gì đó" class="slogan-g-"><span class="slogang_span">Slogan gì đó</span></div>
+        <div data-layer="A_CaiDat" class="a_caidat">
+            <div data-layer="Cấu hình nền tảng" class="cu-hinh-nn-tang"><span class="cuhinhnntang_span">Cấu hình nền tảng</span></div>
+            <div data-layer="Cấu hình máy chủ:" class="cu-hinh-may-chu"><span class="cuhinhmaychu_span">Cấu hình máy chủ:</span></div>
+            <div data-layer="ABC" class="abc"><span class="abc_span">ABC</span></div>
+            <div data-layer="Giới hạn dung lượng:" class="gii-han-dung-lng"><span class="giihandunglng_span">Giới hạn dung lượng:</span></div>
+            <div data-layer="[hăm bíc]" class="hm-bic"><span class="hmbic_span">[hăm bíc]</span></div>
+            <div data-layer="Dung lượng trống:" class="dung-lng-trng"><span class="dunglngtrng_span">Dung lượng trống:</span></div>
+            <div data-layer="[hăm bíc]" class="hm-bic_01"><span class="hmbic_01_span">[hăm bíc]</span></div>
+            <div data-layer="Quản lý sử dụng" class="quan-ly-s-dung"><span class="quanlysdung_span">Quản lý sử dụng</span></div>
+            <div data-layer="Quản lý người dùng" class="quan-ly-ngi-dung"><span class="quanlyngidung_span">Quản lý người dùng</span></div>
+            <div data-layer="Frame 8" class="frame-8">
+            <div data-layer="Group 167" class="group-167">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_01">
+                <svg width="50" height="41" viewBox="0 0 50 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="41" rx="10" fill="#FC94AF"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang"><span class="khachhang_span">STT</span></div>
+            </div>
+            <div data-layer="Group 168" class="group-168">
+                <div data-layer="Rectangle 11" class="rectangle-11_02"></div>
+                <div data-layer="Khách hàng" class="khach-hang_01"><span class="khachhang_01_span">User</span></div>
+            </div>
+            <div data-layer="Group 169" class="group-169">
+                <div data-layer="Rectangle 11" class="rectangle-11_03"></div>
+                <div data-layer="Khách hàng" class="khach-hang_02"><span class="khachhang_02_span">Email</span></div>
+            </div>
+            <div data-layer="Group 170" class="group-170">
+                <div data-layer="Rectangle 11" class="rectangle-11_04"></div>
+                <div data-layer="Khách hàng" class="khach-hang_03"><span class="khachhang_03_span">Mật khẩu</span></div>
+            </div>
+            <div data-layer="Group 171" class="group-171">
+                <div data-layer="Rectangle 11" class="rectangle-11_05"></div>
+                <div data-layer="Khách hàng" class="khach-hang_04"><span class="khachhang_04_span">Trạng thái</span></div>
+            </div>
+            <div data-layer="Group 172" class="group-172">
+                <div data-layer="Rectangle 11" class="rectangle-11_06"></div>
+                <div data-layer="Khách hàng" class="khach-hang_05"><span class="khachhang_05_span">Dịch vụ</span></div>
+            </div>
+            <div data-layer="Group 178" class="group-178">
+                <div data-layer="Rectangle 11" class="rectangle-11_07"></div>
+                <div data-layer="Khách hàng" class="khach-hang_06"><span class="khachhang_06_span">Ngày đăng ký</span></div>
+            </div>
+            <div data-layer="Group 179" class="group-179">
+                <div data-layer="Rectangle 11" class="rectangle-11_08"></div>
+                <div data-layer="Khách hàng" class="khach-hang_07"><span class="khachhang_07_span">Ngày kết thúc</span></div>
+            </div>
+            <div data-layer="Group 160" class="group-160">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_09">
+                <svg width="50" height="41" viewBox="0 0 50 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="41" fill="#D8CFFE"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang_08"><span class="khachhang_08_span">01</span></div>
+            </div>
+            <div data-layer="Group 182" class="group-182">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_10">
+                <svg width="50" height="41" viewBox="0 0 50 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="41" fill="#D8CFFE"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang_09"><span class="khachhang_09_span">01</span></div>
+            </div>
+            <div data-layer="Group 190" class="group-190">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_11">
+                <svg width="50" height="41" viewBox="0 0 50 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="41" fill="#D8CFFE"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang_10"><span class="khachhang_10_span">01</span></div>
+            </div>
+            <div data-layer="Group 198" class="group-198">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_12">
+                <svg width="50" height="41" viewBox="0 0 50 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="41" fill="#D8CFFE"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang_11"><span class="khachhang_11_span">01</span></div>
+            </div>
+            <div data-layer="Group 206" class="group-206">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_13">
+                <svg width="50" height="41" viewBox="0 0 50 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="41" fill="#D8CFFE"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang_12"><span class="khachhang_12_span">01</span></div>
+            </div>
+            <div data-layer="Group 214" class="group-214">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_14">
+                <svg width="50" height="41" viewBox="0 0 50 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="41" fill="#D8CFFE"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang_13"><span class="khachhang_13_span">01</span></div>
+            </div>
+            <div data-layer="Group 173" class="group-173">
+                <div data-layer="Rectangle 11" class="rectangle-11_15"></div>
+                <div data-layer="Khách hàng" class="khach-hang_14"><span class="khachhang_14_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 183" class="group-183">
+                <div data-layer="Rectangle 11" class="rectangle-11_16"></div>
+                <div data-layer="Khách hàng" class="khach-hang_15"><span class="khachhang_15_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 191" class="group-191">
+                <div data-layer="Rectangle 11" class="rectangle-11_17"></div>
+                <div data-layer="Khách hàng" class="khach-hang_16"><span class="khachhang_16_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 199" class="group-199">
+                <div data-layer="Rectangle 11" class="rectangle-11_18"></div>
+                <div data-layer="Khách hàng" class="khach-hang_17"><span class="khachhang_17_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 207" class="group-207">
+                <div data-layer="Rectangle 11" class="rectangle-11_19"></div>
+                <div data-layer="Khách hàng" class="khach-hang_18"><span class="khachhang_18_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 215" class="group-215">
+                <div data-layer="Rectangle 11" class="rectangle-11_20"></div>
+                <div data-layer="Khách hàng" class="khach-hang_19"><span class="khachhang_19_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 174" class="group-174">
+                <div data-layer="Rectangle 11" class="rectangle-11_21"></div>
+                <div data-layer="Khách hàng" class="khach-hang_20"><span class="khachhang_20_span">**********************</span></div>
+            </div>
+            <div data-layer="Group 184" class="group-184">
+                <div data-layer="Rectangle 11" class="rectangle-11_22"></div>
+                <div data-layer="Khách hàng" class="khach-hang_21"><span class="khachhang_21_span">**********************</span></div>
+            </div>
+            <div data-layer="Group 192" class="group-192">
+                <div data-layer="Rectangle 11" class="rectangle-11_23"></div>
+                <div data-layer="Khách hàng" class="khach-hang_22"><span class="khachhang_22_span">**********************</span></div>
+            </div>
+            <div data-layer="Group 200" class="group-200">
+                <div data-layer="Rectangle 11" class="rectangle-11_24"></div>
+                <div data-layer="Khách hàng" class="khach-hang_23"><span class="khachhang_23_span">**********************</span></div>
+            </div>
+            <div data-layer="Group 208" class="group-208">
+                <div data-layer="Rectangle 11" class="rectangle-11_25"></div>
+                <div data-layer="Khách hàng" class="khach-hang_24"><span class="khachhang_24_span">**********************</span></div>
+            </div>
+            <div data-layer="Group 216" class="group-216">
+                <div data-layer="Rectangle 11" class="rectangle-11_26"></div>
+                <div data-layer="Khách hàng" class="khach-hang_25"><span class="khachhang_25_span">**********************</span></div>
+            </div>
+            <div data-layer="Group 175" class="group-175">
+                <div data-layer="Rectangle 11" class="rectangle-11_27"></div>
+                <div data-layer="Khách hàng" class="khach-hang_26"><span class="khachhang_26_span">***********</span></div>
+            </div>
+            <div data-layer="Group 185" class="group-185">
+                <div data-layer="Rectangle 11" class="rectangle-11_28"></div>
+                <div data-layer="Khách hàng" class="khach-hang_27"><span class="khachhang_27_span">***********</span></div>
+            </div>
+            <div data-layer="Group 193" class="group-193">
+                <div data-layer="Rectangle 11" class="rectangle-11_29"></div>
+                <div data-layer="Khách hàng" class="khach-hang_28"><span class="khachhang_28_span">***********</span></div>
+            </div>
+            <div data-layer="Group 201" class="group-201">
+                <div data-layer="Rectangle 11" class="rectangle-11_30"></div>
+                <div data-layer="Khách hàng" class="khach-hang_29"><span class="khachhang_29_span">***********</span></div>
+            </div>
+            <div data-layer="Group 209" class="group-209">
+                <div data-layer="Rectangle 11" class="rectangle-11_31"></div>
+                <div data-layer="Khách hàng" class="khach-hang_30"><span class="khachhang_30_span">***********</span></div>
+            </div>
+            <div data-layer="Group 217" class="group-217">
+                <div data-layer="Rectangle 11" class="rectangle-11_32"></div>
+                <div data-layer="Khách hàng" class="khach-hang_31"><span class="khachhang_31_span">***********</span></div>
+            </div>
+            <div data-layer="Group 176" class="group-176">
+                <div data-layer="Rectangle 11" class="rectangle-11_33"></div>
+                <div data-layer="Khách hàng" class="khach-hang_32"><span class="khachhang_32_span">Hoạt động</span></div>
+            </div>
+            <div data-layer="Group 186" class="group-186">
+                <div data-layer="Rectangle 11" class="rectangle-11_34"></div>
+                <div data-layer="Khách hàng" class="khach-hang_33"><span class="khachhang_33_span">Hoạt động</span></div>
+            </div>
+            <div data-layer="Group 194" class="group-194">
+                <div data-layer="Rectangle 11" class="rectangle-11_35"></div>
+                <div data-layer="Khách hàng" class="khach-hang_34"><span class="khachhang_34_span">Hoạt động</span></div>
+            </div>
+            <div data-layer="Group 202" class="group-202">
+                <div data-layer="Rectangle 11" class="rectangle-11_36"></div>
+                <div data-layer="Khách hàng" class="khach-hang_35"><span class="khachhang_35_span">Hoạt động</span></div>
+            </div>
+            <div data-layer="Group 210" class="group-210">
+                <div data-layer="Rectangle 11" class="rectangle-11_37"></div>
+                <div data-layer="Khách hàng" class="khach-hang_36"><span class="khachhang_36_span">Hoạt động</span></div>
+            </div>
+            <div data-layer="Group 218" class="group-218">
+                <div data-layer="Rectangle 11" class="rectangle-11_38"></div>
+                <div data-layer="Khách hàng" class="khach-hang_37"><span class="khachhang_37_span">Hoạt động</span></div>
+            </div>
+            <div data-layer="Group 177" class="group-177">
+                <div data-layer="Rectangle 11" class="rectangle-11_39"></div>
+                <div data-layer="Khách hàng" class="khach-hang_38"><span class="khachhang_38_span">Premium</span></div>
+            </div>
+            <div data-layer="Group 187" class="group-187">
+                <div data-layer="Rectangle 11" class="rectangle-11_40"></div>
+                <div data-layer="Khách hàng" class="khach-hang_39"><span class="khachhang_39_span">Premium</span></div>
+            </div>
+            <div data-layer="Group 195" class="group-195">
+                <div data-layer="Rectangle 11" class="rectangle-11_41"></div>
+                <div data-layer="Khách hàng" class="khach-hang_40"><span class="khachhang_40_span">Premium</span></div>
+            </div>
+            <div data-layer="Group 203" class="group-203">
+                <div data-layer="Rectangle 11" class="rectangle-11_42"></div>
+                <div data-layer="Khách hàng" class="khach-hang_41"><span class="khachhang_41_span">Premium</span></div>
+            </div>
+            <div data-layer="Group 211" class="group-211">
+                <div data-layer="Rectangle 11" class="rectangle-11_43"></div>
+                <div data-layer="Khách hàng" class="khach-hang_42"><span class="khachhang_42_span">Premium</span></div>
+            </div>
+            <div data-layer="Group 219" class="group-219">
+                <div data-layer="Rectangle 11" class="rectangle-11_44"></div>
+                <div data-layer="Khách hàng" class="khach-hang_43"><span class="khachhang_43_span">Premium</span></div>
+            </div>
+            <div data-layer="Group 180" class="group-180">
+                <div data-layer="Rectangle 11" class="rectangle-11_45"></div>
+                <div data-layer="Khách hàng" class="khach-hang_44"><span class="khachhang_44_span">01/01/2024</span></div>
+            </div>
+            <div data-layer="Group 188" class="group-188">
+                <div data-layer="Rectangle 11" class="rectangle-11_46"></div>
+                <div data-layer="Khách hàng" class="khach-hang_45"><span class="khachhang_45_span">01/01/2024</span></div>
+            </div>
+            <div data-layer="Group 196" class="group-196">
+                <div data-layer="Rectangle 11" class="rectangle-11_47"></div>
+                <div data-layer="Khách hàng" class="khach-hang_46"><span class="khachhang_46_span">01/01/2024</span></div>
+            </div>
+            <div data-layer="Group 204" class="group-204">
+                <div data-layer="Rectangle 11" class="rectangle-11_48"></div>
+                <div data-layer="Khách hàng" class="khach-hang_47"><span class="khachhang_47_span">01/01/2024</span></div>
+            </div>
+            <div data-layer="Group 212" class="group-212">
+                <div data-layer="Rectangle 11" class="rectangle-11_49"></div>
+                <div data-layer="Khách hàng" class="khach-hang_48"><span class="khachhang_48_span">01/01/2024</span></div>
+            </div>
+            <div data-layer="Group 220" class="group-220">
+                <div data-layer="Rectangle 11" class="rectangle-11_50"></div>
+                <div data-layer="Khách hàng" class="khach-hang_49"><span class="khachhang_49_span">01/01/2024</span></div>
+            </div>
+            <div data-layer="Group 181" class="group-181">
+                <div data-layer="Rectangle 11" class="rectangle-11_51"></div>
+                <div data-layer="Khách hàng" class="khach-hang_50"><span class="khachhang_50_span">01/01/2025</span></div>
+            </div>
+            <div data-layer="Group 189" class="group-189">
+                <div data-layer="Rectangle 11" class="rectangle-11_52"></div>
+                <div data-layer="Khách hàng" class="khach-hang_51"><span class="khachhang_51_span">01/01/2025</span></div>
+            </div>
+            <div data-layer="Group 197" class="group-197">
+                <div data-layer="Rectangle 11" class="rectangle-11_53"></div>
+                <div data-layer="Khách hàng" class="khach-hang_52"><span class="khachhang_52_span">01/01/2025</span></div>
+            </div>
+            <div data-layer="Group 205" class="group-205">
+                <div data-layer="Rectangle 11" class="rectangle-11_54"></div>
+                <div data-layer="Khách hàng" class="khach-hang_53"><span class="khachhang_53_span">01/01/2025</span></div>
+            </div>
+            <div data-layer="Group 213" class="group-213">
+                <div data-layer="Rectangle 11" class="rectangle-11_55"></div>
+                <div data-layer="Khách hàng" class="khach-hang_54"><span class="khachhang_54_span">01/01/2025</span></div>
+            </div>
+            <div data-layer="Group 221" class="group-221">
+                <div data-layer="Rectangle 11" class="rectangle-11_56"></div>
+                <div data-layer="Khách hàng" class="khach-hang_55"><span class="khachhang_55_span">01/01/2025</span></div>
+            </div>
+            </div>
+            <div data-layer="Frame 9" class="frame-9">
+            <div data-layer="Group 167" class="group-167_01">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_57">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="50" rx="10" fill="#FC94AF"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang_56"><span class="khachhang_56_span">STT</span></div>
+            </div>
+            <div data-layer="Group 168" class="group-168_01">
+                <div data-layer="Rectangle 11" class="rectangle-11_58"></div>
+                <div data-layer="Khách hàng" class="khach-hang_57"><span class="khachhang_57_span">User</span></div>
+            </div>
+            <div data-layer="Group 169" class="group-169_01">
+                <div data-layer="Rectangle 11" class="rectangle-11_59"></div>
+                <div data-layer="Khách hàng" class="khach-hang_58"><span class="khachhang_58_span">Email</span></div>
+            </div>
+            <div data-layer="Group 222" class="group-222">
+                <div data-layer="Rectangle 11" class="rectangle-11_60"></div>
+                <div data-layer="Khách hàng" class="khach-hang_59"><span class="khachhang_59_span">Đăng nhập</span></div>
+            </div>
+            <div data-layer="Group 223" class="group-223">
+                <div data-layer="Rectangle 11" class="rectangle-11_61"></div>
+                <div data-layer="Khách hàng" class="khach-hang_60"><span class="khachhang_60_span">Đăng xuất</span></div>
+            </div>
+            <div data-layer="Group 160" class="group-160_01">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_62">
+                <svg width="50" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="30" fill="#D8CFFE"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang_61"><span class="khachhang_61_span">01</span></div>
+            </div>
+            <div data-layer="Group 267" class="group-267">
+                <div data-layer="Rectangle 11" class="rectangle-11_63"></div>
+                <div data-layer="Khách hàng" class="khach-hang_62"><span class="khachhang_62_span">01</span></div>
+            </div>
+            <div data-layer="Group 312" class="group-312">
+                <div data-layer="Rectangle 11" class="rectangle-11_64"></div>
+                <div data-layer="Khách hàng" class="khach-hang_63"><span class="khachhang_63_span">01</span></div>
+            </div>
+            <div data-layer="Group 357" class="group-357">
+                <div data-layer="Rectangle 11" class="rectangle-11_65"></div>
+                <div data-layer="Khách hàng" class="khach-hang_64"><span class="khachhang_64_span">01</span></div>
+            </div>
+            <div data-layer="Group 402" class="group-402">
+                <div data-layer="Rectangle 11" class="rectangle-11_66"></div>
+                <div data-layer="Khách hàng" class="khach-hang_65"><span class="khachhang_65_span">01</span></div>
+            </div>
+            <div data-layer="Group 447" class="group-447">
+                <div data-layer="Rectangle 11" class="rectangle-11_67"></div>
+                <div data-layer="Khách hàng" class="khach-hang_66"><span class="khachhang_66_span">01</span></div>
+            </div>
+            <div data-layer="Group 227" class="group-227">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_68">
+                <svg width="50" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="30" fill="#D8CFFE"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang_67"><span class="khachhang_67_span">01</span></div>
+            </div>
+            <div data-layer="Group 268" class="group-268">
+                <div data-layer="Rectangle 11" class="rectangle-11_69"></div>
+                <div data-layer="Khách hàng" class="khach-hang_68"><span class="khachhang_68_span">01</span></div>
+            </div>
+            <div data-layer="Group 313" class="group-313">
+                <div data-layer="Rectangle 11" class="rectangle-11_70"></div>
+                <div data-layer="Khách hàng" class="khach-hang_69"><span class="khachhang_69_span">01</span></div>
+            </div>
+            <div data-layer="Group 358" class="group-358">
+                <div data-layer="Rectangle 11" class="rectangle-11_71"></div>
+                <div data-layer="Khách hàng" class="khach-hang_70"><span class="khachhang_70_span">01</span></div>
+            </div>
+            <div data-layer="Group 403" class="group-403">
+                <div data-layer="Rectangle 11" class="rectangle-11_72"></div>
+                <div data-layer="Khách hàng" class="khach-hang_71"><span class="khachhang_71_span">01</span></div>
+            </div>
+            <div data-layer="Group 448" class="group-448">
+                <div data-layer="Rectangle 11" class="rectangle-11_73"></div>
+                <div data-layer="Khách hàng" class="khach-hang_72"><span class="khachhang_72_span">01</span></div>
+            </div>
+            <div data-layer="Group 232" class="group-232">
+                <div data-svg-wrapper data-layer="Rectangle 11" class="rectangle-11_74">
+                <svg width="50" height="13" viewBox="0 0 50 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.5" width="50" height="30" fill="#D8CFFE"/>
+                </svg>
+                </div>
+                <div data-layer="Khách hàng" class="khach-hang_73"><span class="khachhang_73_span">01</span></div>
+            </div>
+            <div data-layer="Group 269" class="group-269">
+                <div data-layer="Rectangle 11" class="rectangle-11_75"></div>
+                <div data-layer="Khách hàng" class="khach-hang_74"><span class="khachhang_74_span">01</span></div>
+            </div>
+            <div data-layer="Group 314" class="group-314">
+                <div data-layer="Rectangle 11" class="rectangle-11_76"></div>
+                <div data-layer="Khách hàng" class="khach-hang_75"><span class="khachhang_75_span">01</span></div>
+            </div>
+            <div data-layer="Group 359" class="group-359">
+                <div data-layer="Rectangle 11" class="rectangle-11_77"></div>
+                <div data-layer="Khách hàng" class="khach-hang_76"><span class="khachhang_76_span">01</span></div>
+            </div>
+            <div data-layer="Group 404" class="group-404">
+                <div data-layer="Rectangle 11" class="rectangle-11_78"></div>
+                <div data-layer="Khách hàng" class="khach-hang_77"><span class="khachhang_77_span">01</span></div>
+            </div>
+            <div data-layer="Group 449" class="group-449">
+                <div data-layer="Rectangle 11" class="rectangle-11_79"></div>
+                <div data-layer="Khách hàng" class="khach-hang_78"><span class="khachhang_78_span">01</span></div>
+            </div>
+            <div data-layer="Group 237" class="group-237">
+                <div data-layer="Rectangle 11" class="rectangle-11_80"></div>
+                <div data-layer="Khách hàng" class="khach-hang_79"><span class="khachhang_79_span">01</span></div>
+            </div>
+            <div data-layer="Group 270" class="group-270">
+                <div data-layer="Rectangle 11" class="rectangle-11_81"></div>
+                <div data-layer="Khách hàng" class="khach-hang_80"><span class="khachhang_80_span">01</span></div>
+            </div>
+            <div data-layer="Group 315" class="group-315">
+                <div data-layer="Rectangle 11" class="rectangle-11_82"></div>
+                <div data-layer="Khách hàng" class="khach-hang_81"><span class="khachhang_81_span">01</span></div>
+            </div>
+            <div data-layer="Group 360" class="group-360">
+                <div data-layer="Rectangle 11" class="rectangle-11_83"></div>
+                <div data-layer="Khách hàng" class="khach-hang_82"><span class="khachhang_82_span">01</span></div>
+            </div>
+            <div data-layer="Group 405" class="group-405">
+                <div data-layer="Rectangle 11" class="rectangle-11_84"></div>
+                <div data-layer="Khách hàng" class="khach-hang_83"><span class="khachhang_83_span">01</span></div>
+            </div>
+            <div data-layer="Group 450" class="group-450">
+                <div data-layer="Rectangle 11" class="rectangle-11_85"></div>
+                <div data-layer="Khách hàng" class="khach-hang_84"><span class="khachhang_84_span">01</span></div>
+            </div>
+            <div data-layer="Group 242" class="group-242">
+                <div data-layer="Rectangle 11" class="rectangle-11_86"></div>
+                <div data-layer="Khách hàng" class="khach-hang_85"><span class="khachhang_85_span">01</span></div>
+            </div>
+            <div data-layer="Group 271" class="group-271">
+                <div data-layer="Rectangle 11" class="rectangle-11_87"></div>
+                <div data-layer="Khách hàng" class="khach-hang_86"><span class="khachhang_86_span">01</span></div>
+            </div>
+            <div data-layer="Group 316" class="group-316">
+                <div data-layer="Rectangle 11" class="rectangle-11_88"></div>
+                <div data-layer="Khách hàng" class="khach-hang_87"><span class="khachhang_87_span">01</span></div>
+            </div>
+            <div data-layer="Group 361" class="group-361">
+                <div data-layer="Rectangle 11" class="rectangle-11_89"></div>
+                <div data-layer="Khách hàng" class="khach-hang_88"><span class="khachhang_88_span">01</span></div>
+            </div>
+            <div data-layer="Group 406" class="group-406">
+                <div data-layer="Rectangle 11" class="rectangle-11_90"></div>
+                <div data-layer="Khách hàng" class="khach-hang_89"><span class="khachhang_89_span">01</span></div>
+            </div>
+            <div data-layer="Group 451" class="group-451">
+                <div data-layer="Rectangle 11" class="rectangle-11_91"></div>
+                <div data-layer="Khách hàng" class="khach-hang_90"><span class="khachhang_90_span">01</span></div>
+            </div>
+            <div data-layer="Group 247" class="group-247">
+                <div data-layer="Rectangle 11" class="rectangle-11_92"></div>
+                <div data-layer="Khách hàng" class="khach-hang_91"><span class="khachhang_91_span">01</span></div>
+            </div>
+            <div data-layer="Group 272" class="group-272">
+                <div data-layer="Rectangle 11" class="rectangle-11_93"></div>
+                <div data-layer="Khách hàng" class="khach-hang_92"><span class="khachhang_92_span">01</span></div>
+            </div>
+            <div data-layer="Group 317" class="group-317">
+                <div data-layer="Rectangle 11" class="rectangle-11_94"></div>
+                <div data-layer="Khách hàng" class="khach-hang_93"><span class="khachhang_93_span">01</span></div>
+            </div>
+            <div data-layer="Group 362" class="group-362">
+                <div data-layer="Rectangle 11" class="rectangle-11_95"></div>
+                <div data-layer="Khách hàng" class="khach-hang_94"><span class="khachhang_94_span">01</span></div>
+            </div>
+            <div data-layer="Group 407" class="group-407">
+                <div data-layer="Rectangle 11" class="rectangle-11_96"></div>
+                <div data-layer="Khách hàng" class="khach-hang_95"><span class="khachhang_95_span">01</span></div>
+            </div>
+            <div data-layer="Group 452" class="group-452">
+                <div data-layer="Rectangle 11" class="rectangle-11_97"></div>
+                <div data-layer="Khách hàng" class="khach-hang_96"><span class="khachhang_96_span">01</span></div>
+            </div>
+            <div data-layer="Group 252" class="group-252">
+                <div data-layer="Rectangle 11" class="rectangle-11_98"></div>
+                <div data-layer="Khách hàng" class="khach-hang_97"><span class="khachhang_97_span">01</span></div>
+            </div>
+            <div data-layer="Group 273" class="group-273">
+                <div data-layer="Rectangle 11" class="rectangle-11_99"></div>
+                <div data-layer="Khách hàng" class="khach-hang_98"><span class="khachhang_98_span">01</span></div>
+            </div>
+            <div data-layer="Group 318" class="group-318">
+                <div data-layer="Rectangle 11" class="rectangle-11_100"></div>
+                <div data-layer="Khách hàng" class="khach-hang_99"><span class="khachhang_99_span">01</span></div>
+            </div>
+            <div data-layer="Group 363" class="group-363">
+                <div data-layer="Rectangle 11" class="rectangle-11_101"></div>
+                <div data-layer="Khách hàng" class="khach-hang_100"><span class="khachhang_100_span">01</span></div>
+            </div>
+            <div data-layer="Group 408" class="group-408">
+                <div data-layer="Rectangle 11" class="rectangle-11_102"></div>
+                <div data-layer="Khách hàng" class="khach-hang_101"><span class="khachhang_101_span">01</span></div>
+            </div>
+            <div data-layer="Group 453" class="group-453">
+                <div data-layer="Rectangle 11" class="rectangle-11_103"></div>
+                <div data-layer="Khách hàng" class="khach-hang_102"><span class="khachhang_102_span">01</span></div>
+            </div>
+            <div data-layer="Group 257" class="group-257">
+                <div data-layer="Rectangle 11" class="rectangle-11_104"></div>
+                <div data-layer="Khách hàng" class="khach-hang_103"><span class="khachhang_103_span">01</span></div>
+            </div>
+            <div data-layer="Group 274" class="group-274">
+                <div data-layer="Rectangle 11" class="rectangle-11_105"></div>
+                <div data-layer="Khách hàng" class="khach-hang_104"><span class="khachhang_104_span">01</span></div>
+            </div>
+            <div data-layer="Group 319" class="group-319">
+                <div data-layer="Rectangle 11" class="rectangle-11_106"></div>
+                <div data-layer="Khách hàng" class="khach-hang_105"><span class="khachhang_105_span">01</span></div>
+            </div>
+            <div data-layer="Group 364" class="group-364">
+                <div data-layer="Rectangle 11" class="rectangle-11_107"></div>
+                <div data-layer="Khách hàng" class="khach-hang_106"><span class="khachhang_106_span">01</span></div>
+            </div>
+            <div data-layer="Group 409" class="group-409">
+                <div data-layer="Rectangle 11" class="rectangle-11_108"></div>
+                <div data-layer="Khách hàng" class="khach-hang_107"><span class="khachhang_107_span">01</span></div>
+            </div>
+            <div data-layer="Group 454" class="group-454">
+                <div data-layer="Rectangle 11" class="rectangle-11_109"></div>
+                <div data-layer="Khách hàng" class="khach-hang_108"><span class="khachhang_108_span">01</span></div>
+            </div>
+            <div data-layer="Group 262" class="group-262">
+                <div data-layer="Rectangle 11" class="rectangle-11_110"></div>
+                <div data-layer="Khách hàng" class="khach-hang_109"><span class="khachhang_109_span">01</span></div>
+            </div>
+            <div data-layer="Group 275" class="group-275">
+                <div data-layer="Rectangle 11" class="rectangle-11_111"></div>
+                <div data-layer="Khách hàng" class="khach-hang_110"><span class="khachhang_110_span">01</span></div>
+            </div>
+            <div data-layer="Group 320" class="group-320">
+                <div data-layer="Rectangle 11" class="rectangle-11_112"></div>
+                <div data-layer="Khách hàng" class="khach-hang_111"><span class="khachhang_111_span">01</span></div>
+            </div>
+            <div data-layer="Group 365" class="group-365">
+                <div data-layer="Rectangle 11" class="rectangle-11_113"></div>
+                <div data-layer="Khách hàng" class="khach-hang_112"><span class="khachhang_112_span">01</span></div>
+            </div>
+            <div data-layer="Group 410" class="group-410">
+                <div data-layer="Rectangle 11" class="rectangle-11_114"></div>
+                <div data-layer="Khách hàng" class="khach-hang_113"><span class="khachhang_113_span">01</span></div>
+            </div>
+            <div data-layer="Group 455" class="group-455">
+                <div data-layer="Rectangle 11" class="rectangle-11_115"></div>
+                <div data-layer="Khách hàng" class="khach-hang_114"><span class="khachhang_114_span">01</span></div>
+            </div>
+            <div data-layer="Group 173" class="group-173_01">
+                <div data-layer="Rectangle 11" class="rectangle-11_116"></div>
+                <div data-layer="Khách hàng" class="khach-hang_115"><span class="khachhang_115_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 276" class="group-276">
+                <div data-layer="Rectangle 11" class="rectangle-11_117"></div>
+                <div data-layer="Khách hàng" class="khach-hang_116"><span class="khachhang_116_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 321" class="group-321">
+                <div data-layer="Rectangle 11" class="rectangle-11_118"></div>
+                <div data-layer="Khách hàng" class="khach-hang_117"><span class="khachhang_117_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 366" class="group-366">
+                <div data-layer="Rectangle 11" class="rectangle-11_119"></div>
+                <div data-layer="Khách hàng" class="khach-hang_118"><span class="khachhang_118_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 411" class="group-411">
+                <div data-layer="Rectangle 11" class="rectangle-11_120"></div>
+                <div data-layer="Khách hàng" class="khach-hang_119"><span class="khachhang_119_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 456" class="group-456">
+                <div data-layer="Rectangle 11" class="rectangle-11_121"></div>
+                <div data-layer="Khách hàng" class="khach-hang_120"><span class="khachhang_120_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 228" class="group-228">
+                <div data-layer="Rectangle 11" class="rectangle-11_122"></div>
+                <div data-layer="Khách hàng" class="khach-hang_121"><span class="khachhang_121_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 277" class="group-277">
+                <div data-layer="Rectangle 11" class="rectangle-11_123"></div>
+                <div data-layer="Khách hàng" class="khach-hang_122"><span class="khachhang_122_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 322" class="group-322">
+                <div data-layer="Rectangle 11" class="rectangle-11_124"></div>
+                <div data-layer="Khách hàng" class="khach-hang_123"><span class="khachhang_123_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 367" class="group-367">
+                <div data-layer="Rectangle 11" class="rectangle-11_125"></div>
+                <div data-layer="Khách hàng" class="khach-hang_124"><span class="khachhang_124_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 412" class="group-412">
+                <div data-layer="Rectangle 11" class="rectangle-11_126"></div>
+                <div data-layer="Khách hàng" class="khach-hang_125"><span class="khachhang_125_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 457" class="group-457">
+                <div data-layer="Rectangle 11" class="rectangle-11_127"></div>
+                <div data-layer="Khách hàng" class="khach-hang_126"><span class="khachhang_126_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 233" class="group-233">
+                <div data-layer="Rectangle 11" class="rectangle-11_128"></div>
+                <div data-layer="Khách hàng" class="khach-hang_127"><span class="khachhang_127_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 278" class="group-278">
+                <div data-layer="Rectangle 11" class="rectangle-11_129"></div>
+                <div data-layer="Khách hàng" class="khach-hang_128"><span class="khachhang_128_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 323" class="group-323">
+                <div data-layer="Rectangle 11" class="rectangle-11_130"></div>
+                <div data-layer="Khách hàng" class="khach-hang_129"><span class="khachhang_129_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 368" class="group-368">
+                <div data-layer="Rectangle 11" class="rectangle-11_131"></div>
+                <div data-layer="Khách hàng" class="khach-hang_130"><span class="khachhang_130_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 413" class="group-413">
+                <div data-layer="Rectangle 11" class="rectangle-11_132"></div>
+                <div data-layer="Khách hàng" class="khach-hang_131"><span class="khachhang_131_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 458" class="group-458">
+                <div data-layer="Rectangle 11" class="rectangle-11_133"></div>
+                <div data-layer="Khách hàng" class="khach-hang_132"><span class="khachhang_132_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 238" class="group-238">
+                <div data-layer="Rectangle 11" class="rectangle-11_134"></div>
+                <div data-layer="Khách hàng" class="khach-hang_133"><span class="khachhang_133_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 279" class="group-279">
+                <div data-layer="Rectangle 11" class="rectangle-11_135"></div>
+                <div data-layer="Khách hàng" class="khach-hang_134"><span class="khachhang_134_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 324" class="group-324">
+                <div data-layer="Rectangle 11" class="rectangle-11_136"></div>
+                <div data-layer="Khách hàng" class="khach-hang_135"><span class="khachhang_135_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 369" class="group-369">
+                <div data-layer="Rectangle 11" class="rectangle-11_137"></div>
+                <div data-layer="Khách hàng" class="khach-hang_136"><span class="khachhang_136_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 414" class="group-414">
+                <div data-layer="Rectangle 11" class="rectangle-11_138"></div>
+                <div data-layer="Khách hàng" class="khach-hang_137"><span class="khachhang_137_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 459" class="group-459">
+                <div data-layer="Rectangle 11" class="rectangle-11_139"></div>
+                <div data-layer="Khách hàng" class="khach-hang_138"><span class="khachhang_138_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 243" class="group-243">
+                <div data-layer="Rectangle 11" class="rectangle-11_140"></div>
+                <div data-layer="Khách hàng" class="khach-hang_139"><span class="khachhang_139_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 280" class="group-280">
+                <div data-layer="Rectangle 11" class="rectangle-11_141"></div>
+                <div data-layer="Khách hàng" class="khach-hang_140"><span class="khachhang_140_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 325" class="group-325">
+                <div data-layer="Rectangle 11" class="rectangle-11_142"></div>
+                <div data-layer="Khách hàng" class="khach-hang_141"><span class="khachhang_141_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 370" class="group-370">
+                <div data-layer="Rectangle 11" class="rectangle-11_143"></div>
+                <div data-layer="Khách hàng" class="khach-hang_142"><span class="khachhang_142_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 415" class="group-415">
+                <div data-layer="Rectangle 11" class="rectangle-11_144"></div>
+                <div data-layer="Khách hàng" class="khach-hang_143"><span class="khachhang_143_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 460" class="group-460">
+                <div data-layer="Rectangle 11" class="rectangle-11_145"></div>
+                <div data-layer="Khách hàng" class="khach-hang_144"><span class="khachhang_144_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 248" class="group-248">
+                <div data-layer="Rectangle 11" class="rectangle-11_146"></div>
+                <div data-layer="Khách hàng" class="khach-hang_145"><span class="khachhang_145_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 281" class="group-281">
+                <div data-layer="Rectangle 11" class="rectangle-11_147"></div>
+                <div data-layer="Khách hàng" class="khach-hang_146"><span class="khachhang_146_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 326" class="group-326">
+                <div data-layer="Rectangle 11" class="rectangle-11_148"></div>
+                <div data-layer="Khách hàng" class="khach-hang_147"><span class="khachhang_147_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 371" class="group-371">
+                <div data-layer="Rectangle 11" class="rectangle-11_149"></div>
+                <div data-layer="Khách hàng" class="khach-hang_148"><span class="khachhang_148_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 416" class="group-416">
+                <div data-layer="Rectangle 11" class="rectangle-11_150"></div>
+                <div data-layer="Khách hàng" class="khach-hang_149"><span class="khachhang_149_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 461" class="group-461">
+                <div data-layer="Rectangle 11" class="rectangle-11_151"></div>
+                <div data-layer="Khách hàng" class="khach-hang_150"><span class="khachhang_150_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 253" class="group-253">
+                <div data-layer="Rectangle 11" class="rectangle-11_152"></div>
+                <div data-layer="Khách hàng" class="khach-hang_151"><span class="khachhang_151_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 282" class="group-282">
+                <div data-layer="Rectangle 11" class="rectangle-11_153"></div>
+                <div data-layer="Khách hàng" class="khach-hang_152"><span class="khachhang_152_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 327" class="group-327">
+                <div data-layer="Rectangle 11" class="rectangle-11_154"></div>
+                <div data-layer="Khách hàng" class="khach-hang_153"><span class="khachhang_153_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 372" class="group-372">
+                <div data-layer="Rectangle 11" class="rectangle-11_155"></div>
+                <div data-layer="Khách hàng" class="khach-hang_154"><span class="khachhang_154_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 417" class="group-417">
+                <div data-layer="Rectangle 11" class="rectangle-11_156"></div>
+                <div data-layer="Khách hàng" class="khach-hang_155"><span class="khachhang_155_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 462" class="group-462">
+                <div data-layer="Rectangle 11" class="rectangle-11_157"></div>
+                <div data-layer="Khách hàng" class="khach-hang_156"><span class="khachhang_156_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 258" class="group-258">
+                <div data-layer="Rectangle 11" class="rectangle-11_158"></div>
+                <div data-layer="Khách hàng" class="khach-hang_157"><span class="khachhang_157_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 283" class="group-283">
+                <div data-layer="Rectangle 11" class="rectangle-11_159"></div>
+                <div data-layer="Khách hàng" class="khach-hang_158"><span class="khachhang_158_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 328" class="group-328">
+                <div data-layer="Rectangle 11" class="rectangle-11_160"></div>
+                <div data-layer="Khách hàng" class="khach-hang_159"><span class="khachhang_159_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 373" class="group-373">
+                <div data-layer="Rectangle 11" class="rectangle-11_161"></div>
+                <div data-layer="Khách hàng" class="khach-hang_160"><span class="khachhang_160_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 418" class="group-418">
+                <div data-layer="Rectangle 11" class="rectangle-11_162"></div>
+                <div data-layer="Khách hàng" class="khach-hang_161"><span class="khachhang_161_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 463" class="group-463">
+                <div data-layer="Rectangle 11" class="rectangle-11_163"></div>
+                <div data-layer="Khách hàng" class="khach-hang_162"><span class="khachhang_162_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 263" class="group-263">
+                <div data-layer="Rectangle 11" class="rectangle-11_164"></div>
+                <div data-layer="Khách hàng" class="khach-hang_163"><span class="khachhang_163_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 284" class="group-284">
+                <div data-layer="Rectangle 11" class="rectangle-11_165"></div>
+                <div data-layer="Khách hàng" class="khach-hang_164"><span class="khachhang_164_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 329" class="group-329">
+                <div data-layer="Rectangle 11" class="rectangle-11_166"></div>
+                <div data-layer="Khách hàng" class="khach-hang_165"><span class="khachhang_165_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 374" class="group-374">
+                <div data-layer="Rectangle 11" class="rectangle-11_167"></div>
+                <div data-layer="Khách hàng" class="khach-hang_166"><span class="khachhang_166_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 419" class="group-419">
+                <div data-layer="Rectangle 11" class="rectangle-11_168"></div>
+                <div data-layer="Khách hàng" class="khach-hang_167"><span class="khachhang_167_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 464" class="group-464">
+                <div data-layer="Rectangle 11" class="rectangle-11_169"></div>
+                <div data-layer="Khách hàng" class="khach-hang_168"><span class="khachhang_168_span">ABC</span></div>
+            </div>
+            <div data-layer="Group 224" class="group-224">
+                <div data-layer="Rectangle 11" class="rectangle-11_170"></div>
+                <div data-layer="Khách hàng" class="khach-hang_169"><span class="khachhang_169_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 285" class="group-285">
+                <div data-layer="Rectangle 11" class="rectangle-11_171"></div>
+                <div data-layer="Khách hàng" class="khach-hang_170"><span class="khachhang_170_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 330" class="group-330">
+                <div data-layer="Rectangle 11" class="rectangle-11_172"></div>
+                <div data-layer="Khách hàng" class="khach-hang_171"><span class="khachhang_171_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 375" class="group-375">
+                <div data-layer="Rectangle 11" class="rectangle-11_173"></div>
+                <div data-layer="Khách hàng" class="khach-hang_172"><span class="khachhang_172_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 420" class="group-420">
+                <div data-layer="Rectangle 11" class="rectangle-11_174"></div>
+                <div data-layer="Khách hàng" class="khach-hang_173"><span class="khachhang_173_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 465" class="group-465">
+                <div data-layer="Rectangle 11" class="rectangle-11_175"></div>
+                <div data-layer="Khách hàng" class="khach-hang_174"><span class="khachhang_174_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 229" class="group-229">
+                <div data-layer="Rectangle 11" class="rectangle-11_176"></div>
+                <div data-layer="Khách hàng" class="khach-hang_175"><span class="khachhang_175_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 286" class="group-286">
+                <div data-layer="Rectangle 11" class="rectangle-11_177"></div>
+                <div data-layer="Khách hàng" class="khach-hang_176"><span class="khachhang_176_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 331" class="group-331">
+                <div data-layer="Rectangle 11" class="rectangle-11_178"></div>
+                <div data-layer="Khách hàng" class="khach-hang_177"><span class="khachhang_177_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 376" class="group-376">
+                <div data-layer="Rectangle 11" class="rectangle-11_179"></div>
+                <div data-layer="Khách hàng" class="khach-hang_178"><span class="khachhang_178_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 421" class="group-421">
+                <div data-layer="Rectangle 11" class="rectangle-11_180"></div>
+                <div data-layer="Khách hàng" class="khach-hang_179"><span class="khachhang_179_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 466" class="group-466">
+                <div data-layer="Rectangle 11" class="rectangle-11_181"></div>
+                <div data-layer="Khách hàng" class="khach-hang_180"><span class="khachhang_180_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 234" class="group-234">
+                <div data-layer="Rectangle 11" class="rectangle-11_182"></div>
+                <div data-layer="Khách hàng" class="khach-hang_181"><span class="khachhang_181_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 287" class="group-287">
+                <div data-layer="Rectangle 11" class="rectangle-11_183"></div>
+                <div data-layer="Khách hàng" class="khach-hang_182"><span class="khachhang_182_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 332" class="group-332">
+                <div data-layer="Rectangle 11" class="rectangle-11_184"></div>
+                <div data-layer="Khách hàng" class="khach-hang_183"><span class="khachhang_183_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 377" class="group-377">
+                <div data-layer="Rectangle 11" class="rectangle-11_185"></div>
+                <div data-layer="Khách hàng" class="khach-hang_184"><span class="khachhang_184_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 422" class="group-422">
+                <div data-layer="Rectangle 11" class="rectangle-11_186"></div>
+                <div data-layer="Khách hàng" class="khach-hang_185"><span class="khachhang_185_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 467" class="group-467">
+                <div data-layer="Rectangle 11" class="rectangle-11_187"></div>
+                <div data-layer="Khách hàng" class="khach-hang_186"><span class="khachhang_186_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 239" class="group-239">
+                <div data-layer="Rectangle 11" class="rectangle-11_188"></div>
+                <div data-layer="Khách hàng" class="khach-hang_187"><span class="khachhang_187_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 288" class="group-288">
+                <div data-layer="Rectangle 11" class="rectangle-11_189"></div>
+                <div data-layer="Khách hàng" class="khach-hang_188"><span class="khachhang_188_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 333" class="group-333">
+                <div data-layer="Rectangle 11" class="rectangle-11_190"></div>
+                <div data-layer="Khách hàng" class="khach-hang_189"><span class="khachhang_189_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 378" class="group-378">
+                <div data-layer="Rectangle 11" class="rectangle-11_191"></div>
+                <div data-layer="Khách hàng" class="khach-hang_190"><span class="khachhang_190_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 423" class="group-423">
+                <div data-layer="Rectangle 11" class="rectangle-11_192"></div>
+                <div data-layer="Khách hàng" class="khach-hang_191"><span class="khachhang_191_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 468" class="group-468">
+                <div data-layer="Rectangle 11" class="rectangle-11_193"></div>
+                <div data-layer="Khách hàng" class="khach-hang_192"><span class="khachhang_192_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 244" class="group-244">
+                <div data-layer="Rectangle 11" class="rectangle-11_194"></div>
+                <div data-layer="Khách hàng" class="khach-hang_193"><span class="khachhang_193_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 289" class="group-289">
+                <div data-layer="Rectangle 11" class="rectangle-11_195"></div>
+                <div data-layer="Khách hàng" class="khach-hang_194"><span class="khachhang_194_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 334" class="group-334">
+                <div data-layer="Rectangle 11" class="rectangle-11_196"></div>
+                <div data-layer="Khách hàng" class="khach-hang_195"><span class="khachhang_195_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 379" class="group-379">
+                <div data-layer="Rectangle 11" class="rectangle-11_197"></div>
+                <div data-layer="Khách hàng" class="khach-hang_196"><span class="khachhang_196_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 424" class="group-424">
+                <div data-layer="Rectangle 11" class="rectangle-11_198"></div>
+                <div data-layer="Khách hàng" class="khach-hang_197"><span class="khachhang_197_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 469" class="group-469">
+                <div data-layer="Rectangle 11" class="rectangle-11_199"></div>
+                <div data-layer="Khách hàng" class="khach-hang_198"><span class="khachhang_198_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 249" class="group-249">
+                <div data-layer="Rectangle 11" class="rectangle-11_200"></div>
+                <div data-layer="Khách hàng" class="khach-hang_199"><span class="khachhang_199_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 290" class="group-290">
+                <div data-layer="Rectangle 11" class="rectangle-11_201"></div>
+                <div data-layer="Khách hàng" class="khach-hang_200"><span class="khachhang_200_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 335" class="group-335">
+                <div data-layer="Rectangle 11" class="rectangle-11_202"></div>
+                <div data-layer="Khách hàng" class="khach-hang_201"><span class="khachhang_201_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 380" class="group-380">
+                <div data-layer="Rectangle 11" class="rectangle-11_203"></div>
+                <div data-layer="Khách hàng" class="khach-hang_202"><span class="khachhang_202_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 425" class="group-425">
+                <div data-layer="Rectangle 11" class="rectangle-11_204"></div>
+                <div data-layer="Khách hàng" class="khach-hang_203"><span class="khachhang_203_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 470" class="group-470">
+                <div data-layer="Rectangle 11" class="rectangle-11_205"></div>
+                <div data-layer="Khách hàng" class="khach-hang_204"><span class="khachhang_204_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 254" class="group-254">
+                <div data-layer="Rectangle 11" class="rectangle-11_206"></div>
+                <div data-layer="Khách hàng" class="khach-hang_205"><span class="khachhang_205_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 291" class="group-291">
+                <div data-layer="Rectangle 11" class="rectangle-11_207"></div>
+                <div data-layer="Khách hàng" class="khach-hang_206"><span class="khachhang_206_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 336" class="group-336">
+                <div data-layer="Rectangle 11" class="rectangle-11_208"></div>
+                <div data-layer="Khách hàng" class="khach-hang_207"><span class="khachhang_207_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 381" class="group-381">
+                <div data-layer="Rectangle 11" class="rectangle-11_209"></div>
+                <div data-layer="Khách hàng" class="khach-hang_208"><span class="khachhang_208_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 426" class="group-426">
+                <div data-layer="Rectangle 11" class="rectangle-11_210"></div>
+                <div data-layer="Khách hàng" class="khach-hang_209"><span class="khachhang_209_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 471" class="group-471">
+                <div data-layer="Rectangle 11" class="rectangle-11_211"></div>
+                <div data-layer="Khách hàng" class="khach-hang_210"><span class="khachhang_210_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 259" class="group-259">
+                <div data-layer="Rectangle 11" class="rectangle-11_212"></div>
+                <div data-layer="Khách hàng" class="khach-hang_211"><span class="khachhang_211_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 292" class="group-292">
+                <div data-layer="Rectangle 11" class="rectangle-11_213"></div>
+                <div data-layer="Khách hàng" class="khach-hang_212"><span class="khachhang_212_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 337" class="group-337">
+                <div data-layer="Rectangle 11" class="rectangle-11_214"></div>
+                <div data-layer="Khách hàng" class="khach-hang_213"><span class="khachhang_213_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 382" class="group-382">
+                <div data-layer="Rectangle 11" class="rectangle-11_215"></div>
+                <div data-layer="Khách hàng" class="khach-hang_214"><span class="khachhang_214_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 427" class="group-427">
+                <div data-layer="Rectangle 11" class="rectangle-11_216"></div>
+                <div data-layer="Khách hàng" class="khach-hang_215"><span class="khachhang_215_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 472" class="group-472">
+                <div data-layer="Rectangle 11" class="rectangle-11_217"></div>
+                <div data-layer="Khách hàng" class="khach-hang_216"><span class="khachhang_216_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 264" class="group-264">
+                <div data-layer="Rectangle 11" class="rectangle-11_218"></div>
+                <div data-layer="Khách hàng" class="khach-hang_217"><span class="khachhang_217_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 293" class="group-293">
+                <div data-layer="Rectangle 11" class="rectangle-11_219"></div>
+                <div data-layer="Khách hàng" class="khach-hang_218"><span class="khachhang_218_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 338" class="group-338">
+                <div data-layer="Rectangle 11" class="rectangle-11_220"></div>
+                <div data-layer="Khách hàng" class="khach-hang_219"><span class="khachhang_219_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 383" class="group-383">
+                <div data-layer="Rectangle 11" class="rectangle-11_221"></div>
+                <div data-layer="Khách hàng" class="khach-hang_220"><span class="khachhang_220_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 428" class="group-428">
+                <div data-layer="Rectangle 11" class="rectangle-11_222"></div>
+                <div data-layer="Khách hàng" class="khach-hang_221"><span class="khachhang_221_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 473" class="group-473">
+                <div data-layer="Rectangle 11" class="rectangle-11_223"></div>
+                <div data-layer="Khách hàng" class="khach-hang_222"><span class="khachhang_222_span">abc@gmail.com</span></div>
+            </div>
+            <div data-layer="Group 225" class="group-225">
+                <div data-layer="Rectangle 11" class="rectangle-11_224"></div>
+                <div data-layer="Khách hàng" class="khach-hang_223"><span class="khachhang_223_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 294" class="group-294">
+                <div data-layer="Rectangle 11" class="rectangle-11_225"></div>
+                <div data-layer="Khách hàng" class="khach-hang_224"><span class="khachhang_224_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 339" class="group-339">
+                <div data-layer="Rectangle 11" class="rectangle-11_226"></div>
+                <div data-layer="Khách hàng" class="khach-hang_225"><span class="khachhang_225_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 384" class="group-384">
+                <div data-layer="Rectangle 11" class="rectangle-11_227"></div>
+                <div data-layer="Khách hàng" class="khach-hang_226"><span class="khachhang_226_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 429" class="group-429">
+                <div data-layer="Rectangle 11" class="rectangle-11_228"></div>
+                <div data-layer="Khách hàng" class="khach-hang_227"><span class="khachhang_227_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 474" class="group-474">
+                <div data-layer="Rectangle 11" class="rectangle-11_229"></div>
+                <div data-layer="Khách hàng" class="khach-hang_228"><span class="khachhang_228_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 230" class="group-230">
+                <div data-layer="Rectangle 11" class="rectangle-11_230"></div>
+                <div data-layer="Khách hàng" class="khach-hang_229"><span class="khachhang_229_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 295" class="group-295">
+                <div data-layer="Rectangle 11" class="rectangle-11_231"></div>
+                <div data-layer="Khách hàng" class="khach-hang_230"><span class="khachhang_230_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 340" class="group-340">
+                <div data-layer="Rectangle 11" class="rectangle-11_232"></div>
+                <div data-layer="Khách hàng" class="khach-hang_231"><span class="khachhang_231_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 385" class="group-385">
+                <div data-layer="Rectangle 11" class="rectangle-11_233"></div>
+                <div data-layer="Khách hàng" class="khach-hang_232"><span class="khachhang_232_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 430" class="group-430">
+                <div data-layer="Rectangle 11" class="rectangle-11_234"></div>
+                <div data-layer="Khách hàng" class="khach-hang_233"><span class="khachhang_233_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 475" class="group-475">
+                <div data-layer="Rectangle 11" class="rectangle-11_235"></div>
+                <div data-layer="Khách hàng" class="khach-hang_234"><span class="khachhang_234_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 235" class="group-235">
+                <div data-layer="Rectangle 11" class="rectangle-11_236"></div>
+                <div data-layer="Khách hàng" class="khach-hang_235"><span class="khachhang_235_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 296" class="group-296">
+                <div data-layer="Rectangle 11" class="rectangle-11_237"></div>
+                <div data-layer="Khách hàng" class="khach-hang_236"><span class="khachhang_236_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 341" class="group-341">
+                <div data-layer="Rectangle 11" class="rectangle-11_238"></div>
+                <div data-layer="Khách hàng" class="khach-hang_237"><span class="khachhang_237_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 386" class="group-386">
+                <div data-layer="Rectangle 11" class="rectangle-11_239"></div>
+                <div data-layer="Khách hàng" class="khach-hang_238"><span class="khachhang_238_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 431" class="group-431">
+                <div data-layer="Rectangle 11" class="rectangle-11_240"></div>
+                <div data-layer="Khách hàng" class="khach-hang_239"><span class="khachhang_239_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 476" class="group-476">
+                <div data-layer="Rectangle 11" class="rectangle-11_241"></div>
+                <div data-layer="Khách hàng" class="khach-hang_240"><span class="khachhang_240_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 240" class="group-240">
+                <div data-layer="Rectangle 11" class="rectangle-11_242"></div>
+                <div data-layer="Khách hàng" class="khach-hang_241"><span class="khachhang_241_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 297" class="group-297">
+                <div data-layer="Rectangle 11" class="rectangle-11_243"></div>
+                <div data-layer="Khách hàng" class="khach-hang_242"><span class="khachhang_242_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 342" class="group-342">
+                <div data-layer="Rectangle 11" class="rectangle-11_244"></div>
+                <div data-layer="Khách hàng" class="khach-hang_243"><span class="khachhang_243_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 387" class="group-387">
+                <div data-layer="Rectangle 11" class="rectangle-11_245"></div>
+                <div data-layer="Khách hàng" class="khach-hang_244"><span class="khachhang_244_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 432" class="group-432">
+                <div data-layer="Rectangle 11" class="rectangle-11_246"></div>
+                <div data-layer="Khách hàng" class="khach-hang_245"><span class="khachhang_245_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 477" class="group-477">
+                <div data-layer="Rectangle 11" class="rectangle-11_247"></div>
+                <div data-layer="Khách hàng" class="khach-hang_246"><span class="khachhang_246_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 245" class="group-245">
+                <div data-layer="Rectangle 11" class="rectangle-11_248"></div>
+                <div data-layer="Khách hàng" class="khach-hang_247"><span class="khachhang_247_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 298" class="group-298">
+                <div data-layer="Rectangle 11" class="rectangle-11_249"></div>
+                <div data-layer="Khách hàng" class="khach-hang_248"><span class="khachhang_248_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 343" class="group-343">
+                <div data-layer="Rectangle 11" class="rectangle-11_250"></div>
+                <div data-layer="Khách hàng" class="khach-hang_249"><span class="khachhang_249_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 388" class="group-388">
+                <div data-layer="Rectangle 11" class="rectangle-11_251"></div>
+                <div data-layer="Khách hàng" class="khach-hang_250"><span class="khachhang_250_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 433" class="group-433">
+                <div data-layer="Rectangle 11" class="rectangle-11_252"></div>
+                <div data-layer="Khách hàng" class="khach-hang_251"><span class="khachhang_251_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 478" class="group-478">
+                <div data-layer="Rectangle 11" class="rectangle-11_253"></div>
+                <div data-layer="Khách hàng" class="khach-hang_252"><span class="khachhang_252_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 250" class="group-250">
+                <div data-layer="Rectangle 11" class="rectangle-11_254"></div>
+                <div data-layer="Khách hàng" class="khach-hang_253"><span class="khachhang_253_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 299" class="group-299">
+                <div data-layer="Rectangle 11" class="rectangle-11_255"></div>
+                <div data-layer="Khách hàng" class="khach-hang_254"><span class="khachhang_254_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 344" class="group-344">
+                <div data-layer="Rectangle 11" class="rectangle-11_256"></div>
+                <div data-layer="Khách hàng" class="khach-hang_255"><span class="khachhang_255_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 389" class="group-389">
+                <div data-layer="Rectangle 11" class="rectangle-11_257"></div>
+                <div data-layer="Khách hàng" class="khach-hang_256"><span class="khachhang_256_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 434" class="group-434">
+                <div data-layer="Rectangle 11" class="rectangle-11_258"></div>
+                <div data-layer="Khách hàng" class="khach-hang_257"><span class="khachhang_257_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 479" class="group-479">
+                <div data-layer="Rectangle 11" class="rectangle-11_259"></div>
+                <div data-layer="Khách hàng" class="khach-hang_258"><span class="khachhang_258_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 255" class="group-255">
+                <div data-layer="Rectangle 11" class="rectangle-11_260"></div>
+                <div data-layer="Khách hàng" class="khach-hang_259"><span class="khachhang_259_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 300" class="group-300">
+                <div data-layer="Rectangle 11" class="rectangle-11_261"></div>
+                <div data-layer="Khách hàng" class="khach-hang_260"><span class="khachhang_260_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 345" class="group-345">
+                <div data-layer="Rectangle 11" class="rectangle-11_262"></div>
+                <div data-layer="Khách hàng" class="khach-hang_261"><span class="khachhang_261_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 390" class="group-390">
+                <div data-layer="Rectangle 11" class="rectangle-11_263"></div>
+                <div data-layer="Khách hàng" class="khach-hang_262"><span class="khachhang_262_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 435" class="group-435">
+                <div data-layer="Rectangle 11" class="rectangle-11_264"></div>
+                <div data-layer="Khách hàng" class="khach-hang_263"><span class="khachhang_263_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 480" class="group-480">
+                <div data-layer="Rectangle 11" class="rectangle-11_265"></div>
+                <div data-layer="Khách hàng" class="khach-hang_264"><span class="khachhang_264_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 260" class="group-260">
+                <div data-layer="Rectangle 11" class="rectangle-11_266"></div>
+                <div data-layer="Khách hàng" class="khach-hang_265"><span class="khachhang_265_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 301" class="group-301">
+                <div data-layer="Rectangle 11" class="rectangle-11_267"></div>
+                <div data-layer="Khách hàng" class="khach-hang_266"><span class="khachhang_266_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 346" class="group-346">
+                <div data-layer="Rectangle 11" class="rectangle-11_268"></div>
+                <div data-layer="Khách hàng" class="khach-hang_267"><span class="khachhang_267_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 391" class="group-391">
+                <div data-layer="Rectangle 11" class="rectangle-11_269"></div>
+                <div data-layer="Khách hàng" class="khach-hang_268"><span class="khachhang_268_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 436" class="group-436">
+                <div data-layer="Rectangle 11" class="rectangle-11_270"></div>
+                <div data-layer="Khách hàng" class="khach-hang_269"><span class="khachhang_269_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 481" class="group-481">
+                <div data-layer="Rectangle 11" class="rectangle-11_271"></div>
+                <div data-layer="Khách hàng" class="khach-hang_270"><span class="khachhang_270_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 265" class="group-265">
+                <div data-layer="Rectangle 11" class="rectangle-11_272"></div>
+                <div data-layer="Khách hàng" class="khach-hang_271"><span class="khachhang_271_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 302" class="group-302">
+                <div data-layer="Rectangle 11" class="rectangle-11_273"></div>
+                <div data-layer="Khách hàng" class="khach-hang_272"><span class="khachhang_272_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 347" class="group-347">
+                <div data-layer="Rectangle 11" class="rectangle-11_274"></div>
+                <div data-layer="Khách hàng" class="khach-hang_273"><span class="khachhang_273_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 392" class="group-392">
+                <div data-layer="Rectangle 11" class="rectangle-11_275"></div>
+                <div data-layer="Khách hàng" class="khach-hang_274"><span class="khachhang_274_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 437" class="group-437">
+                <div data-layer="Rectangle 11" class="rectangle-11_276"></div>
+                <div data-layer="Khách hàng" class="khach-hang_275"><span class="khachhang_275_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 482" class="group-482">
+                <div data-layer="Rectangle 11" class="rectangle-11_277"></div>
+                <div data-layer="Khách hàng" class="khach-hang_276"><span class="khachhang_276_span">10:00 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 226" class="group-226">
+                <div data-layer="Rectangle 11" class="rectangle-11_278"></div>
+                <div data-layer="Khách hàng" class="khach-hang_277"><span class="khachhang_277_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 303" class="group-303">
+                <div data-layer="Rectangle 11" class="rectangle-11_279"></div>
+                <div data-layer="Khách hàng" class="khach-hang_278"><span class="khachhang_278_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 348" class="group-348">
+                <div data-layer="Rectangle 11" class="rectangle-11_280"></div>
+                <div data-layer="Khách hàng" class="khach-hang_279"><span class="khachhang_279_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 393" class="group-393">
+                <div data-layer="Rectangle 11" class="rectangle-11_281"></div>
+                <div data-layer="Khách hàng" class="khach-hang_280"><span class="khachhang_280_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 438" class="group-438">
+                <div data-layer="Rectangle 11" class="rectangle-11_282"></div>
+                <div data-layer="Khách hàng" class="khach-hang_281"><span class="khachhang_281_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 483" class="group-483">
+                <div data-layer="Rectangle 11" class="rectangle-11_283"></div>
+                <div data-layer="Khách hàng" class="khach-hang_282"><span class="khachhang_282_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 231" class="group-231">
+                <div data-layer="Rectangle 11" class="rectangle-11_284"></div>
+                <div data-layer="Khách hàng" class="khach-hang_283"><span class="khachhang_283_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 304" class="group-304">
+                <div data-layer="Rectangle 11" class="rectangle-11_285"></div>
+                <div data-layer="Khách hàng" class="khach-hang_284"><span class="khachhang_284_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 349" class="group-349">
+                <div data-layer="Rectangle 11" class="rectangle-11_286"></div>
+                <div data-layer="Khách hàng" class="khach-hang_285"><span class="khachhang_285_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 394" class="group-394">
+                <div data-layer="Rectangle 11" class="rectangle-11_287"></div>
+                <div data-layer="Khách hàng" class="khach-hang_286"><span class="khachhang_286_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 439" class="group-439">
+                <div data-layer="Rectangle 11" class="rectangle-11_288"></div>
+                <div data-layer="Khách hàng" class="khach-hang_287"><span class="khachhang_287_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 484" class="group-484">
+                <div data-layer="Rectangle 11" class="rectangle-11_289"></div>
+                <div data-layer="Khách hàng" class="khach-hang_288"><span class="khachhang_288_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 236" class="group-236">
+                <div data-layer="Rectangle 11" class="rectangle-11_290"></div>
+                <div data-layer="Khách hàng" class="khach-hang_289"><span class="khachhang_289_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 305" class="group-305">
+                <div data-layer="Rectangle 11" class="rectangle-11_291"></div>
+                <div data-layer="Khách hàng" class="khach-hang_290"><span class="khachhang_290_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 350" class="group-350">
+                <div data-layer="Rectangle 11" class="rectangle-11_292"></div>
+                <div data-layer="Khách hàng" class="khach-hang_291"><span class="khachhang_291_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 395" class="group-395">
+                <div data-layer="Rectangle 11" class="rectangle-11_293"></div>
+                <div data-layer="Khách hàng" class="khach-hang_292"><span class="khachhang_292_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 440" class="group-440">
+                <div data-layer="Rectangle 11" class="rectangle-11_294"></div>
+                <div data-layer="Khách hàng" class="khach-hang_293"><span class="khachhang_293_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 485" class="group-485">
+                <div data-layer="Rectangle 11" class="rectangle-11_295"></div>
+                <div data-layer="Khách hàng" class="khach-hang_294"><span class="khachhang_294_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 241" class="group-241">
+                <div data-layer="Rectangle 11" class="rectangle-11_296"></div>
+                <div data-layer="Khách hàng" class="khach-hang_295"><span class="khachhang_295_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 306" class="group-306">
+                <div data-layer="Rectangle 11" class="rectangle-11_297"></div>
+                <div data-layer="Khách hàng" class="khach-hang_296"><span class="khachhang_296_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 351" class="group-351">
+                <div data-layer="Rectangle 11" class="rectangle-11_298"></div>
+                <div data-layer="Khách hàng" class="khach-hang_297"><span class="khachhang_297_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 396" class="group-396">
+                <div data-layer="Rectangle 11" class="rectangle-11_299"></div>
+                <div data-layer="Khách hàng" class="khach-hang_298"><span class="khachhang_298_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 441" class="group-441">
+                <div data-layer="Rectangle 11" class="rectangle-11_300"></div>
+                <div data-layer="Khách hàng" class="khach-hang_299"><span class="khachhang_299_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 486" class="group-486">
+                <div data-layer="Rectangle 11" class="rectangle-11_301"></div>
+                <div data-layer="Khách hàng" class="khach-hang_300"><span class="khachhang_300_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 246" class="group-246">
+                <div data-layer="Rectangle 11" class="rectangle-11_302"></div>
+                <div data-layer="Khách hàng" class="khach-hang_301"><span class="khachhang_301_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 307" class="group-307">
+                <div data-layer="Rectangle 11" class="rectangle-11_303"></div>
+                <div data-layer="Khách hàng" class="khach-hang_302"><span class="khachhang_302_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 352" class="group-352">
+                <div data-layer="Rectangle 11" class="rectangle-11_304"></div>
+                <div data-layer="Khách hàng" class="khach-hang_303"><span class="khachhang_303_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 397" class="group-397">
+                <div data-layer="Rectangle 11" class="rectangle-11_305"></div>
+                <div data-layer="Khách hàng" class="khach-hang_304"><span class="khachhang_304_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 442" class="group-442">
+                <div data-layer="Rectangle 11" class="rectangle-11_306"></div>
+                <div data-layer="Khách hàng" class="khach-hang_305"><span class="khachhang_305_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 487" class="group-487">
+                <div data-layer="Rectangle 11" class="rectangle-11_307"></div>
+                <div data-layer="Khách hàng" class="khach-hang_306"><span class="khachhang_306_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 251" class="group-251">
+                <div data-layer="Rectangle 11" class="rectangle-11_308"></div>
+                <div data-layer="Khách hàng" class="khach-hang_307"><span class="khachhang_307_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 308" class="group-308">
+                <div data-layer="Rectangle 11" class="rectangle-11_309"></div>
+                <div data-layer="Khách hàng" class="khach-hang_308"><span class="khachhang_308_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 353" class="group-353">
+                <div data-layer="Rectangle 11" class="rectangle-11_310"></div>
+                <div data-layer="Khách hàng" class="khach-hang_309"><span class="khachhang_309_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 398" class="group-398">
+                <div data-layer="Rectangle 11" class="rectangle-11_311"></div>
+                <div data-layer="Khách hàng" class="khach-hang_310"><span class="khachhang_310_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 443" class="group-443">
+                <div data-layer="Rectangle 11" class="rectangle-11_312"></div>
+                <div data-layer="Khách hàng" class="khach-hang_311"><span class="khachhang_311_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 488" class="group-488">
+                <div data-layer="Rectangle 11" class="rectangle-11_313"></div>
+                <div data-layer="Khách hàng" class="khach-hang_312"><span class="khachhang_312_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 256" class="group-256">
+                <div data-layer="Rectangle 11" class="rectangle-11_314"></div>
+                <div data-layer="Khách hàng" class="khach-hang_313"><span class="khachhang_313_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 309" class="group-309">
+                <div data-layer="Rectangle 11" class="rectangle-11_315"></div>
+                <div data-layer="Khách hàng" class="khach-hang_314"><span class="khachhang_314_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 354" class="group-354">
+                <div data-layer="Rectangle 11" class="rectangle-11_316"></div>
+                <div data-layer="Khách hàng" class="khach-hang_315"><span class="khachhang_315_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 399" class="group-399">
+                <div data-layer="Rectangle 11" class="rectangle-11_317"></div>
+                <div data-layer="Khách hàng" class="khach-hang_316"><span class="khachhang_316_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 444" class="group-444">
+                <div data-layer="Rectangle 11" class="rectangle-11_318"></div>
+                <div data-layer="Khách hàng" class="khach-hang_317"><span class="khachhang_317_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 489" class="group-489">
+                <div data-layer="Rectangle 11" class="rectangle-11_319"></div>
+                <div data-layer="Khách hàng" class="khach-hang_318"><span class="khachhang_318_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 261" class="group-261">
+                <div data-layer="Rectangle 11" class="rectangle-11_320"></div>
+                <div data-layer="Khách hàng" class="khach-hang_319"><span class="khachhang_319_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 310" class="group-310">
+                <div data-layer="Rectangle 11" class="rectangle-11_321"></div>
+                <div data-layer="Khách hàng" class="khach-hang_320"><span class="khachhang_320_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 355" class="group-355">
+                <div data-layer="Rectangle 11" class="rectangle-11_322"></div>
+                <div data-layer="Khách hàng" class="khach-hang_321"><span class="khachhang_321_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 400" class="group-400">
+                <div data-layer="Rectangle 11" class="rectangle-11_323"></div>
+                <div data-layer="Khách hàng" class="khach-hang_322"><span class="khachhang_322_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 445" class="group-445">
+                <div data-layer="Rectangle 11" class="rectangle-11_324"></div>
+                <div data-layer="Khách hàng" class="khach-hang_323"><span class="khachhang_323_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 490" class="group-490">
+                <div data-layer="Rectangle 11" class="rectangle-11_325"></div>
+                <div data-layer="Khách hàng" class="khach-hang_324"><span class="khachhang_324_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 266" class="group-266">
+                <div data-layer="Rectangle 11" class="rectangle-11_326"></div>
+                <div data-layer="Khách hàng" class="khach-hang_325"><span class="khachhang_325_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 311" class="group-311">
+                <div data-layer="Rectangle 11" class="rectangle-11_327"></div>
+                <div data-layer="Khách hàng" class="khach-hang_326"><span class="khachhang_326_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 356" class="group-356">
+                <div data-layer="Rectangle 11" class="rectangle-11_328"></div>
+                <div data-layer="Khách hàng" class="khach-hang_327"><span class="khachhang_327_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 401" class="group-401">
+                <div data-layer="Rectangle 11" class="rectangle-11_329"></div>
+                <div data-layer="Khách hàng" class="khach-hang_328"><span class="khachhang_328_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 446" class="group-446">
+                <div data-layer="Rectangle 11" class="rectangle-11_330"></div>
+                <div data-layer="Khách hàng" class="khach-hang_329"><span class="khachhang_329_span">10:30 19/10/2025</span></div>
+            </div>
+            <div data-layer="Group 491" class="group-491">
+                <div data-layer="Rectangle 11" class="rectangle-11_331"></div>
+                <div data-layer="Khách hàng" class="khach-hang_330"><span class="khachhang_330_span">10:30 19/10/2025</span></div>
+            </div>
+            </div>
+        </div>
+        <div data-layer="Rectangle 81" class="rectangle-81"></div>
+        <div data-layer="Cá nhân" class="ca-nhn"><span class="canhn_span">Cá nhân</span></div>
+        <div data-layer="Rectangle 81" class="rectangle-81_01"></div>
+        <div data-layer="Cài đặt" class="cai-t"><span class="cait_span">Cài đặt</span></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+  function fitScreen() {
+    const designWidth = 1920;
+    const designHeight = 1080;
+    const scaleX = window.innerWidth / designWidth;
+    const scaleY = window.innerHeight / designHeight;
+    const scale = Math.min(scaleX, scaleY);
+    document.documentElement.style.setProperty('--scale', scale);
+  }
+
+  window.addEventListener('resize', fitScreen);
+  fitScreen();
+</script>
