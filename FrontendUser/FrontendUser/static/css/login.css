@@ -1,0 +1,195 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+-webkit-font-smoothing: antialiased;
+box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Ngăn thanh trượt */
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #0D0D55, #8A53A5);
+}
+
+.UFLogin1 {
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+  transform: scale(calc(min(100vw / 1440, 100vh / 1024)));
+  background: white;
+  overflow: hidden;
+  transform-origin: top left;
+} 
+.MTSaNPhMThuCFunD{
+  left: 717px; 
+  top: 757px; 
+  position: absolute; 
+  color: white; 
+  font-size: 14px; 
+  font-family: Inter; 
+  font-weight: 400; 
+  word-wrap: break-word
+}
+
+.Image2 {
+  width: 234px; 
+  height: 217px; 
+  left: 752px; 
+  top: 184px; 
+  position: absolute; 
+  opacity: 0.50;
+}
+
+.Rectangle6 {
+  width: 439px; 
+  height: 567px; 
+  left: 500px; 
+  top: 228px; 
+  position: absolute; 
+  opacity: 0.85; 
+  background: linear-gradient(90deg, #0D0D55 12%, #8A53A5 98%); 
+  border-radius: 15px;
+}
+
+.Rectangle9 {
+  width: 156.23px;
+  height: 40px;
+  left: 653px;
+  top: 610px;
+  position: absolute;
+  opacity: 0.85;
+  background: #D8CFFE;
+  border-radius: 10px;
+  display: flex;                /* canh giữa chữ */
+  align-items: center;          
+  justify-content: center;
+}
+
+.ButtonDN {
+  color: #0A0B5B;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 800;
+}
+
+
+.NgNhP {
+left: 550px; 
+top: 314px; 
+position: absolute; 
+color: white; 
+font-size: 30px; 
+font-family: Bona Nova; 
+font-weight: 700; 
+word-wrap: break-word
+}
+
+.ULogin1CbLuumatkhau{
+  left: 549px; 
+  top: 564px; 
+  position: absolute;
+}
+
+.ULogin1CbLuumatkhau {
+  position: absolute;
+  left: 550px;
+  top: 560px;
+  width: 24px;
+  height: 24px;
+}
+
+.LUMTKhUChoLNNgNhPSau {
+  left: 580px;
+  top: 566px;
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ULogin1BQuenmatkhau {
+  left: 776px;
+  top: 519px;
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 400;
+  text-decoration: underline;
+  word-wrap: break-word;
+}
+
+.Rectangle8 {
+  width: 340px;
+  height: 40px;
+  left: 550px;
+  top: 469px;
+  position: absolute;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.Eye {
+  left: 845px;
+  top: 477px;
+  position: absolute;
+}
+
+.ULogin1TMatkhau {
+  left: 585px;
+  top: 476px;
+  position: absolute;
+  color: #D8CFFE;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.Key {
+  left: 558px;
+  top: 480px;
+  position: absolute;
+}
+
+.Rectangle7 {
+  width: 340px;
+  height: 40px;
+  left: 550px;
+  top: 397px;
+  position: absolute;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.MarkEmailUnread {
+  left: 557px;
+  top: 405px;
+  position: absolute;
+}
+
+.ULogin1TEmail {
+  left: 585px;
+  top: 404px;
+  position: absolute;
+  color: #D8CFFE;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+}

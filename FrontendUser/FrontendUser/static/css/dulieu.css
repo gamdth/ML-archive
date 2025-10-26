@@ -1,0 +1,393 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+-webkit-font-smoothing: antialiased;
+box-sizing: border-box;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* canh giữa ngang */
+  align-items: flex-start;  /* bám lên trên thay vì giữa dọc */
+  overflow: hidden;
+}
+
+/* Giao diện chính */
+.wrapper {
+  width: 1920px; /* kích thước thiết kế gốc */
+  height: 1080px;
+  transform: scale(var(--scale));
+  transform-origin: top center; /* co giãn từ đỉnh giữa */
+}
+
+/* Wrapper chính chứa toàn bộ giao diện */
+.UFPhanloai {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: scale(calc(min(100vw / 1440, 100vh / 1024)));
+  transform-origin: top right;
+  background: white;
+  overflow: hidden;
+}
+.Image2{
+  width: 338px; 
+  height: 313px; 
+  left: -61px; 
+  top: -59px; 
+  position: absolute;
+}
+.Rectangle17{
+  width: 392px; 
+  height: 823px; 
+  left: 0px; 
+  top: 201px; 
+  position: absolute; 
+  opacity: 0.15; 
+  background: #8353A5;
+}
+
+.Slogan{
+  width: 343px; 
+  height: 50px; 
+  left: 219px; 
+  top: 27px; 
+  position: absolute; 
+  color: #FC94AF; 
+  font-size: 20px; 
+  font-family: Inter; 
+  font-weight: 400; 
+  word-wrap: break-word;
+}
+
+.LeadingIcon{
+  width: 48px; 
+  height: 48px; 
+  justify-content: center; 
+  align-items: center; 
+  display: flex;
+}
+
+.ContentFind{
+  width: 40px; 
+  overflow: hidden; 
+  border-radius: 100px; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  display: inline-flex;
+}
+.StateLayerFind{
+  align-self: stretch; 
+  height: 40px; 
+  justify-content: center; 
+  align-items: center; 
+  display: inline-flex;
+}
+
+.IconFind{
+  position: relative;
+}
+
+.ContentTextFind{
+  flex: 1 1 0; 
+  align-self: stretch; 
+  padding-left: 20px; 
+  padding-right: 20px; 
+  justify-content: flex-start; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+}
+
+.UTSearchchucnang{
+  justify-content: center; 
+  display: flex; 
+  flex-direction: column; 
+  color: var(--Schemes-On-Surface-Variant, #49454F); 
+  font-size: 16px; 
+  font-family: Roboto; 
+  font-weight: 400; 
+  line-height: 24px; 
+  letter-spacing: 0.50px; 
+  word-wrap: break-word;
+}
+
+.UIconSearchchucnang{
+  left: 308px; 
+  top: 4px; 
+  position: absolute; 
+  justify-content: flex-end; 
+  align-items: 
+  center; display: flex;
+}
+
+.StTrailingIcon{
+  width: 48px; 
+  height: 48px; 
+  justify-content: center; 
+  align-items: center; 
+  display: flex;
+}
+
+.ContentIconSearchchucnang{
+  width: 40px; 
+  overflow: hidden; 
+  border-radius: 100px; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  display: inline-flex;
+}
+
+.StateLayerSearchchucnang{
+  align-self: stretch; 
+  height: 40px; 
+  justify-content: center; 
+  align-items: center; 
+  display: inline-flex;
+}
+
+.IconSearch{
+  position: relative
+}
+
+.RecChucNang{
+  width: 360px; 
+  height: 73px; 
+  left: 16px; 
+  top: 853px; 
+  position: absolute; 
+  background: #0D0D55; 
+  border-radius: 10px;
+}
+
+.ToiUuHoa{
+  left: 108px; 
+  top: 879px; 
+  position: absolute; 
+  color: #FFFEFE; 
+  font-size: 20px; 
+  font-family: Inter; 
+  font-weight: 400; 
+  word-wrap: break-word;
+}
+
+.RecQuanlyDuLieu{
+  width: 360px; 
+  height: 73px; 
+  left: 17px; 
+  top: 374px; 
+  position: absolute; 
+  opacity: 0.50; 
+  background: #FC94AF; 
+  border-radius: 10px;
+}
+
+.QuanLyDuLieu{
+  left: 129px; 
+  top: 399px; 
+  position: absolute; 
+  color: white; 
+  font-size: 20px; 
+  font-family: Inter;
+  font-weight: 700; 
+  word-wrap: break-word;
+}
+
+.RecThongKe{
+  width: 360px; 
+  height: 73px; 
+  left: 17px; 
+  top: 493px; 
+  position: absolute; 
+  opacity: 0.50; 
+  background: #0D0D55; 
+  border-radius: 10px;
+}
+
+.ThongKe{
+  left: 152px; 
+  top: 518px; 
+  position: absolute; 
+  color: white; 
+  font-size: 20px; 
+  font-family: Inter;
+  font-weight: 400; 
+  word-wrap: break-word;
+}
+
+.RecPhanLoai{
+  width: 360px; 
+  height: 73px; 
+  left: 16px; 
+  top: 613px; 
+  position: absolute; 
+  opacity: 0.80; 
+  background: #0D0D55; 
+  border-radius: 10px;
+}
+
+.PhanLoaiKhachHang{
+  left: 96px; 
+  top: 639px; 
+  position: absolute; 
+  color: white; 
+  font-size: 20px; 
+  font-family: Inter; 
+  font-weight: 400; 
+  word-wrap: break-word;
+}
+
+.RecGoiYTuDong{
+    width: 360px; 
+    height: 73px; 
+    left: 16px; 
+    top: 732px; 
+    position: absolute; 
+    opacity: 0.80; 
+    background: #0D0D55; 
+    border-radius: 10px;
+  }
+
+.ChienLuocGoiYTuDong{
+  left: 93px; 
+  top: 758px; 
+  position: absolute; 
+  color: white; 
+  font-size: 20px; 
+  font-family: Inter; 
+  font-weight: 400; 
+  word-wrap: break-word;
+  }
+
+.Huong{
+    left: 1324px; 
+    top: 127px; 
+    position: absolute; 
+    justify-content: center; 
+    display: flex; 
+    flex-direction: column; 
+    color: black; 
+    font-size: 16px; 
+    font-family: Roboto; 
+    font-weight: 400; 
+    line-height: 24px; 
+    letter-spacing: 0.50px; 
+    word-wrap: break-word;
+}
+
+.TrangChu{
+    left: 838px; 
+    top: 73px; 
+    position: absolute; 
+    justify-content: center; 
+    display: flex; 
+    flex-direction: column; 
+    color: black; 
+    font-size: 16px; 
+    font-family: Roboto; 
+    font-weight: 400; 
+    line-height: 24px; 
+    letter-spacing: 0.50px; 
+    word-wrap: break-word;
+}
+
+.GioiThieu{
+  left: 990px; 
+  top: 73px; 
+  position: absolute; 
+  justify-content: center; 
+  display: flex; 
+  flex-direction: column; 
+  color: black; 
+  font-size: 16px; 
+  font-family: Roboto; 
+  font-weight: 400; 
+  line-height: 24px; 
+  letter-spacing: 0.50px; 
+  word-wrap: break-word;
+}
+
+.ThongBao{
+    left: 1145px; 
+    top: 73px; 
+    position: absolute; 
+    justify-content: center; 
+    display: flex; 
+    flex-direction: column; 
+    color: black; 
+    font-size: 16px; 
+    font-family: Roboto; 
+    font-weight: 400; 
+    line-height: 24px; 
+    letter-spacing: 0.50px; 
+    word-wrap: break-word;
+}
+.Database{
+    width: 488px; 
+    height: 476px; 
+    left: 684px; 
+    top: 438px; 
+    position: absolute; 
+    overflow: hidden;
+}
+
+.Icon1{
+    left: 61px; 
+    top: 39.67px; 
+    position: absolute;
+}
+
+/*Browse dataset */
+.browse-dataset {
+  position: absolute;
+  width: 974px;
+  height: 70px;
+  margin: 20px auto;
+  left: 430px;
+  top: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6b699e;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+}
+
+#fileLabel {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  flex: 1;
+}
+
+.file-input {
+  display: none; /* ẩn input mặc định */
+}
+
+.browse-btn {
+  background-color: #d4a9bf;
+  color: #1d0e40;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.browse-btn:hover {
+  background-color: #c58cae;
+}
