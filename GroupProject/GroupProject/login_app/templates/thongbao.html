@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Thông báo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .gioithieu-btn {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .thng-bo {
+      background-color: #f8b6c1;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Dropdown box */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      background-color: #fff0f3;
+      min-width: 280px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      z-index: 10;
+      padding: 10px;
+    }
+
+    .dropdown-content .item {
+      padding: 8px 10px;
+      border-bottom: 1px solid #ffd6de;
+      font-size: 14px;
+    }
+
+    .dropdown-content .item:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-content .item span {
+      display: block;
+      font-size: 12px;
+      color: #666;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nút Thông báo -->
+  <div class="gioithieu-btn" onclick="toggleThongBao()">
+    <div class="thng-bo"><span class="thngbo_span">Thông báo</span></div>
+
+    <!-- Dropdown -->
+    <div class="dropdown-content" id="dropdownThongBao">
+      <div class="item">
+        🔔 Thông tin cập nhật của bạn đang chờ được xét duyệt
+        <span>Ngày 20/10/2025</span>
+      </div>
+      <div class="item">
+        🔔 Đơn hàng của bạn đã được giao thành công
+        <span>Ngày 22/10/2025</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleThongBao() {
+      const dropdown = document.getElementById("dropdownThongBao");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    // Ẩn dropdown khi click ra ngoài
+    window.addEventListener("click", function(e) {
+      const btn = document.querySelector(".gioithieu-btn");
+      if (!btn.contains(e.target)) {
+        document.getElementById("dropdownThongBao").style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>

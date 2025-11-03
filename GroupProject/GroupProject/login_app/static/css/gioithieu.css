@@ -1,0 +1,361 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+-webkit-font-smoothing: antialiased;
+box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    font-family: Times New Roman, Times, serif;
+}
+.wrapper {
+    width: 1920px;
+    height: 1080px;
+}
+.gioithieu {
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+  background: #FFFEFE;
+}
+/* ===== PHẦN LAYOUT (SIDEBAR + TOPBAR) ===== */
+        /* Logo & Slogan */
+            .image-2 {
+                width: 338px;
+                height: 313px;
+                left: -61px;
+                top: -59px;
+                position: absolute;
+            }
+            .slogan-g- {
+                width: 343px;
+                height: 50px;
+                left: 219px;
+                top: 27px;
+                position: absolute;
+            }
+            .slogang_span {
+                color: #FC94AF;
+                font-size: 20px;
+            }
+        /* TOPBAR */
+            .trang-ch, .gii-thiu, .thng-bo {
+                position: absolute;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                top: 73px;
+                font-size: 16px;
+            }
+            .trang-ch a, .gii-thiu a, .thng-bo a {
+                text-decoration: none;
+                color: black;
+            }
+            .trang-ch { left: 838px; }
+            .gii-thiu { left: 990px; }
+            .thng-bo { left: 1145px; }
+
+        /*Avatar*/
+            .generic-avatar { left: 1310px; top: 56px; position: absolute; }
+            .hng { left: 1316px; top: 131px; position: absolute; font-size: 16px; }
+
+/* CSS MỚI CHO DROPDOWN PROFILE */
+/* Container click avatar và tên */
+.profile-container {
+    position: absolute;
+    top: 56px; left: 1310px;
+    display: flex; flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20; /* Nằm trên topbar */
+}
+/* Hủy bỏ position absolute cũ của các phần tử con */
+.profile-container .generic-avatar {
+    position: static;
+}
+.profile-container .hng {
+    position: static;
+    font-size: 16px;
+    margin-top: 8px;
+}
+/* Menu dropdown (ẩn mặc định) */
+.dropdown-profile {
+    display: none; /* Ẩn đi */
+    position: absolute;
+    top: 100%; /* Hiện ngay bên dưới container */
+    right: 0;
+    margin-top: 12px; /* Khoảng cách với avatar */
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    z-index: 100;
+    border: 1px solid #eee;
+    overflow: hidden; /* Để bo góc các item bên trong */
+}
+
+/* Lớp .show để JS hiển thị dropdown */
+.dropdown-profile.show {
+    display: block;
+}
+
+/* Các mục trong menu */
+.profile-item {
+    display: block;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-decoration: none;
+}
+
+.profile-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* Đường gạch ngang */
+.profile-divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 4px 0;
+}
+
+/* Nút đăng xuất */
+.profile-item.logout {
+    color: #d9534f; /* Màu đỏ */
+}
+
+.profile-item.logout:hover {
+    background-color: #f2dede;
+}
+
+
+
+
+
+.rectangle-82 {
+  width: 169px;
+  height: 202px;
+  left: 144px;
+  top: 291px;
+  position: absolute;
+  opacity: 0.20;
+  background: linear-gradient(180deg, #8353A5 0%, #FC94AF 100%);
+  border-radius: 20px;
+}
+
+.rectangle-84 {
+  width: 169px;
+  height: 202px;
+  left: 144px;
+  top: 745px;
+  position: absolute;
+  opacity: 0.20;
+  background: linear-gradient(180deg, #8353A5 0%, #FC94AF 100%);
+  border-radius: 20px;
+}
+
+.tester_span {
+  color: black;
+  font-size: 16px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 50px;
+  word-wrap: break-word;
+}
+
+.tester {
+  width: 130px;
+  height: 52px;
+  left: 162px;
+  top: 895px;
+  position: absolute;
+  text-align: center;
+}
+
+.rectangle-83 {
+  width: 169px;
+  height: 202px;
+  left: 144px;
+  top: 518px;
+  position: absolute;
+  opacity: 0.20;
+  background: linear-gradient(180deg, #8353A5 0%, #FC94AF 100%);
+  border-radius: 20px;
+}
+
+.back-end_span {
+  color: black;
+  font-size: 16px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 50px;
+  word-wrap: break-word;
+}
+
+.back-end {
+  width: 130px;
+  height: 52px;
+  left: 162px;
+  top: 668px;
+  position: absolute;
+  text-align: center;
+}
+
+.rectangle-85 {
+  width: 169px;
+  height: 202px;
+  left: 383px;
+  top: 404px;
+  position: absolute;
+  opacity: 0.20;
+  background: linear-gradient(180deg, #8353A5 0%, #FC94AF 100%);
+  border-radius: 20px;
+}
+
+.front-end_span {
+  color: black;
+  font-size: 16px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 50px;
+  word-wrap: break-word;
+}
+
+.front-end {
+  width: 130px;
+  height: 52px;
+  left: 403px;
+  top: 554px;
+  position: absolute;
+  text-align: center;
+}
+
+.rectangle-86 {
+  width: 169px;
+  height: 202px;
+  left: 383px;
+  top: 631px;
+  position: absolute;
+  opacity: 0.20;
+  background: linear-gradient(180deg, #8353A5 0%, #FC94AF 100%);
+  border-radius: 20px;
+}
+
+.front-end_01_span {
+  color: black;
+  font-size: 16px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 50px;
+  word-wrap: break-word;
+}
+
+.front-end_01 {
+  width: 130px;
+  height: 52px;
+  left: 403px;
+  top: 781px;
+  position: absolute;
+  text-align: center;
+}
+
+.vchngti_span {
+  color: #0D0D55;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 800;
+  line-height: 50px;
+  word-wrap: break-word;
+}
+
+.v-chng-ti {
+  left: 144px;
+  top: 222px;
+  position: absolute;
+  text-align: right;
+}
+
+.tmnhn_span {
+  color: #0D0D55;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 800;
+  line-height: 50px;
+  word-wrap: break-word;
+}
+
+.tm-nhn {
+  left: 708px;
+  top: 289px;
+  position: absolute;
+  text-align: right;
+}
+
+.smnh_span {
+  color: #0D0D55;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 800;
+  line-height: 50px;
+  word-wrap: break-word;
+}
+
+.s-mnh {
+  left: 703px;
+  top: 595px;
+  position: absolute;
+  text-align: right;
+}
+
+.pmback-end_span {
+  color: black;
+  font-size: 16px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 50px;
+  word-wrap: break-word;
+}
+
+.pmback-end {
+  width: 130px;
+  height: 52px;
+  left: 150px;
+  top: 441px;
+  position: absolute;
+  text-align: right;
+}
+
+.rectangle-87 {
+  width: 574px;
+  height: 198px;
+  left: 711px;
+  top: 356px;
+  position: absolute;
+  opacity: 0.20;
+  background: linear-gradient(180deg, #0A0B5B 0%, white 100%);
+  border-radius: 10px;
+}
+
+.image {
+  width: 574px;
+  height: 198px;
+  left: 711px;
+  top: 686px;
+  position: absolute;
+  opacity: 0.20;
+  background: linear-gradient(180deg, #0A0B5B 0%, white 100%);
+  border-radius: 10px;
+}
+
