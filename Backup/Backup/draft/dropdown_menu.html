@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thống kê dữ liệu</title>
+  <style>
+    body {
+      font-family: Inter, sans-serif;
+      text-align: center;
+      margin: 40px;
+    }
+    select, button {
+      padding: 8px;
+      margin: 8px;
+    }
+    img {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chức năng thống kê</h1>
+  <form method="get" action="/chart">
+    <label>Chọn loại biểu đồ:</label>
+    <select name="type">
+      <option value="bar">Biểu đồ cột</option>
+      <option value="line">Biểu đồ đường</option>
+      <option value="pie">Biểu đồ tròn</option>
+    </select>
+    <button type="submit">Thống kê</button>
+  </form>
+
+  {% if request.args.get('type') %}
+    <img src="/chart?type={{ request.args.get('type') }}" alt="Chart">
+  {% endif %}
+</body>
+</html>

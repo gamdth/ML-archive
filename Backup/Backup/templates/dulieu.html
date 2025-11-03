@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun(d) | Quản lý dữ liệu</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dulieu.css') }}">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Ẩn thanh trượt */
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+<!--FULL SHARE-->
+    <div data-layer="U_F_PhanLoai" class="UFPhanloai" style="width: 1440px; height: 1024px; position: relative; background: white; overflow: hidden">
+      <!--Database-->
+      <div data-layer="Database" data-size="48" class="Database" >
+        <div data-svg-wrapper data-layer="Icon1" class="Icon1" >
+          <svg width="370" height="401" viewBox="0 0 370 401" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M368 61.5C368 94.3609 286.068 121 185 121C83.9319 121 2 94.3609 2 61.5M368 61.5C368 28.6391 286.068 2 185 2C83.9319 2 2 28.6391 2 61.5M368 61.5V339.167C368 372.09 286.667 398.667 185 398.667C83.3333 398.667 2 372.09 2 339.167V61.5M368 200.333C368 233.257 286.667 259.833 185 259.833C83.3333 259.833 2 233.257 2 200.333" stroke="var(--Icon-Default-Default, #1E1E1E)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    <div data-layer="Rectangle 17" class="Rectangle17" style="width: 392px; height: 823px; left: 0px; top: 201px; position: absolute; opacity: 0.15; background: #8353A5"></div>
+    <img data-layer="image 2" class="Image2" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+    <div data-layer="Slogan gì đó" class="Slogan" >Slogan gì đó</div>
+    <!--search bar-->
+    <div data-layer="Search bar" data-show-1st-trailing-icon="true" data-show-2nd-trailing-icon="false" data-show-avatar="False" data-show-leading-icon="true" data-state="Enabled" class="SearchBar" style="width: 360px; height: 56px; max-width: 720px; left: 16px; top: 250px; position: absolute; background: white; overflow: hidden; border-radius: 28px; justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex">
+        <!--3 dấu gạch-->
+        <div data-layer="Leading-icon" data-show-focus-indicator="false" data-size="Small" data-state="Enabled" data-type="Round" data-width="Default" class="LeadingIcon" >
+            <div data-layer="ContentFind" class="ContentFind">
+            <div data-layer="State-layer" class="StateLayerFind" >
+                <div data-svg-wrapper data-layer="IconFind" class="IconFind" >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                </svg>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!--Tìm kiếm chức năng-->
+        <div data-layer="ContentTextFind" class="ContentTextFind" >
+          <div data-layer="U_T_SearchChucNang" class="UTSearchchucnang" >Tìm kiếm chức năng</div>
+        </div>
+        <!--Icon tìm kiếm chứng năng-->
+        <div data-layer="U_Icon_SearchChucNang" class="UIconSearchchucnang" >
+            <div data-layer="1st trailing-icon" data-show-focus-indicator="false" data-size="Small" data-state="Enabled" data-type="Round" data-width="Default" class="StTrailingIcon" >
+            <div data-layer="ContentIconSearchchucnang" class="ContentIconSearchchucnang" >
+                <div data-layer="State-layerSearchchucnang" class="StateLayerSearchchucnang" >
+                <div data-svg-wrapper data-layer="IconSearch" class="IconSearch">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                    </svg>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div data-layer="Rectangle 15" class="RecChucNang" ></div>
+    <div data-layer="Tối ưu hóa chiến dịch" class="ToiUuHoa" >Tối ưu hóa chiến dịch</div>
+    <div data-layer="Rectangle 11" class="RecQuanlyDuLieu"></div>
+    <div data-layer="Quản lí dữ liệu" class="QuanLyDuLieu" >Quản lí dữ liệu</div>
+    <div data-layer="Rectangle 12" class="RecThongKe"></div>
+    <div data-layer="Thống kê" class="ThongKe" >Thống kê </div>
+    <div data-layer="Rectangle 14" class="RecPhanLoai" ></div>
+    <div data-layer="Phân loại khách hàng" class="PhanLoaiKhachHang" >Phân loại khách hàng</div>
+    <div data-layer="Rectangle 16" class="RecGoiYTuDong" ></div>
+    <div data-layer="Chiến lược gợi ý tự động" class="ChienLuocGoiYTuDong" >Chiến lược gợi ý tự động</div>
+    <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="GenericAvatar" style="left: 1318px; top: 52px; position: absolute">
+    <!--Định dạng công cụ phía trên-->  
+      <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="62" height="63" rx="31" fill="var(--Schemes-Primary-Container, #EADDFF)"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M40.3009 25.2C40.3009 30.4191 36.1371 34.65 31.0009 34.65C25.8646 34.65 21.7009 30.4191 21.7009 25.2C21.7009 19.9809 25.8646 15.75 31.0009 15.75C36.1371 15.75 40.3009 19.9809 40.3009 25.2ZM37.2009 25.2C37.2009 28.6794 34.425 31.5 31.0009 31.5C27.5767 31.5 24.8009 28.6794 24.8009 25.2C24.8009 21.7206 27.5767 18.9 31.0009 18.9C34.425 18.9 37.2009 21.7206 37.2009 25.2Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+        <path d="M31.0009 39.375C20.9656 39.375 12.4152 45.4047 9.1582 53.8525C9.95164 54.6531 10.7875 55.4103 11.662 56.1205C14.0873 48.3646 21.6958 42.525 31.0009 42.525C40.306 42.525 47.9144 48.3646 50.3398 56.1205C51.2143 55.4103 52.0501 54.6531 52.8435 53.8525C49.5865 45.4048 41.0362 39.375 31.0009 39.375Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+        </svg>
+    </div>
+    <div data-layer="Hương" class="Huong" >Hương</div>
+    <div data-layer="Trang chủ" class="TrangChu" >Trang chủ</div>
+    <div data-layer="Giới thiệu" class="GioiThieu" >Giới thiệu</div>
+    <div data-layer="Thông báo" class="ThongBao">Thông báo</div>
+  <!--Browse dataset-->
+  <div class="browse-dataset">
+    <label id="fileLabel" for="fileInput">Chưa có dữ liệu được chọn</label>
+    <input type="file" id="fileInput" class="file-input" accept=".csv,.xlsx" />
+    <button class="browse-btn" onclick="document.getElementById('fileInput').click()">Browse</button>
+  </div>
+</div>
+<!--Định dạng SHARE-->
+</body>
+<script>
+  function fitScreen() {
+    const designWidth = 1920;
+    const designHeight = 1080;
+    const scaleX = window.innerWidth / designWidth;
+    const scaleY = window.innerHeight / designHeight;
+    const scale = Math.min(scaleX, scaleY);
+    document.documentElement.style.setProperty('--scale', scale);
+  }
+
+  window.addEventListener('resize', fitScreen);
+  fitScreen();
+</script>

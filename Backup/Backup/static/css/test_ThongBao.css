@@ -1,0 +1,46 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  margin: 40px;
+}
+
+.notification-list {
+  background-color: #ffe6eb;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  position: absolute;
+  left: 450px;
+  top: 145px;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.notification:last-child {
+  margin-bottom: 0;
+}
+
+.notification-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.message {
+  font-size: 16px;
+}
+
+.date {
+  font-size: 14px;
+  font-style: italic;
+}
