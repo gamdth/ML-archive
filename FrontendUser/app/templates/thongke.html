@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun(d) | Thống kê</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/thongke.css') }}">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Ẩn thanh trượt */
+    }
+
+    /* 2. THÊM CSS CHO SIDEBAR VÀ FORM */
+    a.nav-link {
+        text-decoration: none;
+        color: inherit;
+    }
+    a.nav-link:hover [data-layer^="Rectangle"] {
+         opacity: 0.7;
+    }
+
+    /* CSS cho form thống kê */
+    .stats-form {
+      /* Tái sử dụng class .Rectangle55 */
+      position: absolute;
+      left: 420px;
+      top: 130px;
+      padding: 20px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      display: flex;
+      gap: 20px; /* Khoảng cách giữa các mục */
+      align-items: center;
+    }
+    .stats-form div {
+      display: flex;
+      flex-direction: column;
+    }
+    .stats-form label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    .stats-form select {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      min-width: 200px;
+    }
+    .stats-form button {
+      padding: 10px 20px;
+      background-color: #8353A5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      align-self: flex-end; /* Căn nút button xuống dưới */
+    }
+    .stats-form button:hover {
+      background-color: #6a448a;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+<div data-layer="U_F_PhanLoai" class="UFPhanloai" style="width: 1440px; height: 1024px; position: relative; background: white; overflow: hidden">
+
+      {% include '_sidebar.html' %}
+      <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="GenericAvatar" style="left: 1318px; top: 52px; position: absolute">
+      <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="62" height="63" rx="31" fill="var(--Schemes-Primary-Container, #EADDFF)"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M40.3009 25.2C40.3009 30.4191 36.1371 34.65 31.0009 34.65C25.8646 34.65 21.7009 30.4191 21.7009 25.2C21.7009 19.9809 25.8646 15.75 31.0009 15.75C36.1371 15.75 40.3009 19.9809 40.3009 25.2ZM37.2009 25.2C37.2009 28.6794 34.425 31.5 31.0009 31.5C27.5767 31.5 24.8009 28.6794 24.8009 25.2C24.8009 21.7206 27.5767 18.9 31.0009 18.9C34.425 18.9 37.2009 21.7206 37.2009 25.2Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+        <path d="M31.0009 39.375C20.9656 39.375 12.4152 45.4047 9.1582 53.8525C9.95164 54.6531 10.7875 55.4103 11.662 56.1205C14.0873 48.3646 21.6958 42.525 31.0009 42.525C40.306 42.525 47.9144 48.3646 50.3398 56.1205C51.2143 55.4103 52.0501 54.6531 52.8435 53.8525C49.5865 45.4048 41.0362 39.375 31.0009 39.375Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+        </svg>
+    </div>
+    <div data-layer="Hương" class="Huong" >Hương</div>
+    <div data-layer="Trang chủ" class="TrangChu" >Trang chủ</div>
+    <div data-layer="Giới thiệu" class="GioiThieu" >Giới thiệu</div>
+    <div data-layer="Thông báo" class="ThongBao">Thông báo</div>
+
+    <form class="stats-form" action="{{ url_for('stats.view_stats') }}" method="POST">
+      <div>
+        <label for="variableSelect">Chọn biến thống kê:</label>
+        <select id="variableSelect" name="variable_select">
+  <option value="">-- Chọn biến --</option>
+  <option value="age" {% if selected_var == 'age' %} selected{% endif %}>
+    Thống kê theo độ tuổi
+  </option>
+  <option value="score" {% if selected_var == 'score' %} selected{% endif %}>
+    Thống kê theo điểm tín dụng
+  </option>
+</select>
+
+<select id="chartTypeSelect" name="chart_type_select">
+  <option value="bar" {% if selected_type == 'bar' %} selected{% endif %}>Biểu đồ cột</option>
+  <option value="line" {% if selected_type == 'line' %} selected{% endif %}>Biểu đồ đường</option>
+  <option value="pie" {% if selected_type == 'pie' %} selected{% endif %}>Biểu đồ tròn</option>
+</select>
+      </div>
+
+      <button type="submit">Thống kê</button>
+    </form>
+
+    <div data-layer="U_ThongKe1_Chart" class="UThongke1Chart" style="width: 700px; height: 550px; background: #FFF; border-radius: 10px; position: absolute; left: 566px; top: 250px; padding: 20px;">
+      <canvas id="myChart" style="width: 100%; height: 100%;"></canvas>
+    </div>
+
+</div></div><script>
+  // Chỉ chạy script này NẾU có dữ liệu chart từ Flask
+  {% if chart_data and chart_labels %}
+
+    // 1. Lấy thẻ canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+
+    // 2. Lấy dữ liệu từ Flask (dùng filter 'tojson' để an toàn)
+    const labels = {{ chart_labels | tojson }};
+    const dataValues = {{ chart_data | tojson }};
+    const chartType = {{ chart_type | tojson }};
+
+    // 3. Chuẩn bị dữ liệu cho Chart.js
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Thống kê',
+        data: dataValues,
+        backgroundColor: [ // Thêm một vài màu
+          'rgba(255, 99, 132, 0.5)',
+          'rgba(54, 162, 235, 0.5)',
+          'rgba(255, 206, 86, 0.5)',
+          'rgba(75, 192, 192, 0.5)',
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // 4. Cấu hình
+    const config = {
+      type: chartType, // 'bar', 'line', 'pie'
+      data: data,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false, // Tắt để chart lấp đầy div
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // 5. Vẽ biểu đồ
+    new Chart(ctx, config);
+
+  {% endif %}
+</script>
+
+<script>
+  function fitScreen() {
+    const designWidth = 1920;
+    const designHeight = 1080;
+    const scaleX = window.innerWidth / designWidth;
+    const scaleY = window.innerHeight / designHeight;
+    const scale = Math.min(scaleX, scaleY);
+    document.documentElement.style.setProperty('--scale', scale);
+  }
+
+  window.addEventListener('resize', fitScreen);
+  fitScreen();
+</script>
+
+</body>
+</html>

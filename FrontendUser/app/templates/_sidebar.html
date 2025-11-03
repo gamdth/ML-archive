@@ -1,0 +1,61 @@
+{# Tên file: app/templates/_sidebar.html (Đã sửa lỗi link và thêm Home) #}
+
+<div data-layer="Sidebar-Wrapper" class="SidebarWrapper">
+
+    <div data-layer="Rectangle 17" class="Rectangle17" style="width: 392px; height: 823px; left: 0px; top: 201px; position: absolute; opacity: 0.15; background: #8353A5"></div>
+
+    <img data-layer="image 2" class="Image2" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+    <div data-layer="Slogan gì đó" class="Slogan" >Slogan gì đó</div>
+
+    <div data-layer="Search bar" ...>...</div>
+
+    {% set active_style = 'background: #6a448a; border-radius: 5px; opacity: 1;' %}
+
+    {# NÚT TRANG CHỦ #}
+    <a href="{{ url_for('main.index') }}" class="nav-link">
+    <div data-layer="Rectangle_Home" class="RecQuanlyDuLieu"
+         style="{{ active_style if active_page == 'home' else '' }}"></div>
+    <div data-layer="Trang chủ" class="QuanLyDuLieu">Trang chủ</div>
+</a>
+    
+    {# Quản lý Dữ liệu #}
+    <a href="{{ url_for('data.data_page') }}" class="nav-link">
+        <div data-layer="Rectangle 11" class="RecQuanlyDuLieu"
+             style="{{ active_style if active_page == 'data' else '' }}"></div>
+        <div data-layer="Quản lí dữ liệu" class="QuanLyDuLieu">Quản lí dữ liệu</div>
+    </a>
+
+    {# 💥 SỬA LỖI LINK: Thống kê #}
+    <a href="{{ url_for('stats.view_stats') }}" class="nav-link">
+        <div data-layer="Rectangle 12" class="RecThongKe"
+             style="{{ active_style if active_page == 'stats' else '' }}"></div>
+        <div data-layer="Thống kê" class="ThongKe" >Thống kê </div>
+    </a>
+
+    {# 💥 SỬA LỖI LINK: Phân loại khách hàng #}
+    <a href="{{ url_for('analysis.classify') }}" class="nav-link">
+        <div data-layer="Rectangle 14" class="RecPhanLoai"
+             style="{{ active_style if active_page == 'analysis' else '' }}"></div>
+        <div data-layer="Phân loại khách hàng" class="PhanLoaiKhachHang" >Phân loại khách hàng</div>
+    </a>
+
+    {# Chiến lược gợi ý tự động #}
+    <a href="{{ url_for('strategy.view_strategy') }}" class="nav-link">
+        <div data-layer="Rectangle 16" class="RecGoiYTuDong"
+             style="{{ active_style if active_page == 'strategy' else '' }}"></div>
+        <div data-layer="Chiến lược gợi ý tự động" class="ChienLuocGoiYTuDong" >Chiến lược gợi ý tự động</div>
+    </a>
+
+    {# 💥 SỬA LỖI LINK: Tối ưu hóa chiến dịch #}
+    <a href="{{ url_for('optimize.view_optimize') }}" class="nav-link">
+        <div data-layer="Rectangle 15" class="RecChucNang"
+             style="{{ active_style if active_page == 'optimize' else '' }}"></div>
+        <div data-layer="Tối ưu hóa chiến dịch" class="ToiUuHoa" >Tối ưu hóa chiến dịch</div>
+    </a>
+
+    <a href="{{ url_for('auth.logout') }}" class="nav-link" style="margin-top: 40px;">
+        <div data-layer="Rectangle 18_Logout" class="RecPhanLoai"
+             style="background: #D9534F; opacity: 0.8;"></div>
+        <div data-layer="Đăng xuất" class="PhanLoaiKhachHang" style="color: #D9534F;">Đăng xuất</div>
+    </a>
+</div>

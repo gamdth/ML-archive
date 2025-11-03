@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fund(d) | Phân loại khách hàng</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/phanloai.css') }}">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Ẩn thanh trượt */
+    }
+
+    /* === PHẦN CSS MỚI ĐƯỢC THÊM === */
+    a.nav-link {
+        text-decoration: none; /* Bỏ gạch chân */
+        color: inherit; /* Giữ màu chữ gốc */
+    }
+    a.nav-link:hover [data-layer^="Rectangle"] {
+         opacity: 0.7; /* Hiệu ứng hover */
+    }
+
+    /* CSS cho form tìm kiếm */
+    .search-customer-form {
+      /* Đặt vị trí form (lấy từ class Rectangle18 cũ) */
+      position: absolute;
+      left: 418px;
+      top: 130px;
+      display: flex;
+      align-items: center;
+    }
+    .search-customer-form input {
+      /* Tái sử dụng class Rectangle18 cho input */
+      width: 300px; /* Tùy chỉnh */
+      height: 40px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding-left: 15px;
+      font-size: 16px;
+    }
+    .search-customer-form button {
+      /* Tái sử dụng class icon cho button */
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px; /* Khoảng cách */
+    }
+    /* === KẾT THÚC PHẦN CSS MỚI === */
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+<div data-layer="U_F_PhanLoai" class="UFPhanloai" style="width: 1440px; height: 1024px; position: relative; background: white; overflow: hidden">
+
+      {% include '_sidebar.html' %}
+      <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="GenericAvatar" style="left: 1318px; top: 52px; position: absolute">
+      <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="62" height="63" rx="31" fill="var(--Schemes-Primary-Container, #EADDFF)"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M40.3009 25.2C40.3009 30.4191 36.1371 34.65 31.0009 34.65C25.8646 34.65 21.7009 30.4191 21.7009 25.2C21.7009 19.9809 25.8646 15.75 31.0009 15.75C36.1371 15.75 40.3009 19.9809 40.3009 25.2ZM37.2009 25.2C37.2009 28.6794 34.425 31.5 31.0009 31.5C27.5767 31.5 24.8009 28.6794 24.8009 25.2C24.8009 21.7206 27.5767 18.9 31.0009 18.9C34.425 18.9 37.2009 21.7206 37.2009 25.2Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+        <path d="M31.0009 39.375C20.9656 39.375 12.4152 45.4047 9.1582 53.8525C9.95164 54.6531 10.7875 55.4103 11.662 56.1205C14.0873 48.3646 21.6958 42.525 31.0009 42.525C40.306 42.525 47.9144 48.3646 50.3398 56.1205C51.2143 55.4103 52.0501 54.6531 52.8435 53.8525C49.5865 45.4048 41.0362 39.375 31.0009 39.375Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+        </svg>
+    </div>
+    <div data-layer="Hương" class="Huong" >Hương</div>
+    <div data-layer="Trang chủ" class="TrangChu" >Trang chủ</div>
+    <div data-layer="Giới thiệu" class="GioiThieu" >Giới thiệu</div>
+    <div data-layer="Thông báo" class="ThongBao">Thông báo</div>
+
+    <form class="search-customer-form" action="{{ url_for('analysis.classify') }}" method="POST">
+      <input type="text" name="search_query" class="Rectangle18"
+             placeholder="Tìm theo họ, tên, hoặc số thẻ..." value="{{ search_term or '' }}">
+
+      <button type="submit" class="UPhanloaiIconSearchkhachhang">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="#49454F"/>
+          </svg>
+      </button>
+    </form>
+
+    <div class="data-table-customer">
+      <table class="styled-table">
+        <thead>
+        <tr>
+          <th>STT</th>
+          <th>Họ & Tên lót</th>
+          <th>Tên</th>
+          <th>Ngày sinh</th>
+          <th>Nữ</th> <th>Thẻ tín dụng</th>
+          <th>Điểm tín dụng</th>
+          <th>Trạng thái thẻ</th>
+          <th>Ghi chú</th>
+        </tr>
+        </thead>
+        <tbody>
+          {% for customer in customers %}
+          <tr>
+            <td>{{ loop.index }}</td> <td>{{ customer.ho_lot }}</td>
+            <td>{{ customer.ten }}</td>
+            <td>{{ customer.ngay_sinh }}</td>
+            <td>{{ 'x' if customer.nu else '' }}</td> <td>{{ customer.the_tin_dung }}</td>
+            <td>{{ customer.diem_tin_dung }}</td>
+            <td>{{ customer.trang_thai_the }}</td>
+            <td>{{ customer.ghi_chu }}</td>
+          </tr>
+          {% endfor %}
+
+          {% if not customers %}
+          <tr>
+            <td colspan="9" style="text-align: center; padding: 20px;">
+              Không tìm thấy khách hàng nào phù hợp với từ khóa "{{ search_term }}".
+            </td>
+          </tr>
+          {% endif %}
+
+        </tbody>
+      </table>
+    </div>
+</div></div><script>
+  function fitScreen() {
+    const designWidth = 1920;
+    const designHeight = 1080;
+    const scaleX = window.innerWidth / designWidth;
+    const scaleY = window.innerHeight / designHeight;
+    const scale = Math.min(scaleX, scaleY);
+    document.documentElement.style.setProperty('--scale', scale);
+  }
+
+  window.addEventListener('resize', fitScreen);
+  fitScreen();
+</script>
+</body>
+</html>

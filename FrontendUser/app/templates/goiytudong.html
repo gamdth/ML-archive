@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fund(d) | Chiến lược gợi ý tự động</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/goiytudong.css') }}">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Ẩn thanh trượt */
+    }
+
+    /* === PHẦN CSS MỚI ĐƯỢC THÊM === */
+    a.nav-link {
+        text-decoration: none; /* Bỏ gạch chân */
+        color: inherit; /* Giữ màu chữ gốc */
+    }
+    a.nav-link:hover [data-layer^="Rectangle"] {
+         opacity: 0.7; /* Hiệu ứng hover */
+    }
+    /* === KẾT THÚC PHẦN CSS MỚI === */
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+<div data-layer="U_F_PhanLoai" class="UFPhanloai" style="width: 1440px; height: 1024px; position: relative; background: white; overflow: hidden">
+
+      {% include '_sidebar.html' %}
+      <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="GenericAvatar" style="left: 1318px; top: 52px; position: absolute">
+      <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="62" height="63" rx="31" fill="var(--Schemes-Primary-Container, #EADDFF)"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M40.3009 25.2C40.3009 30.4191 36.1371 34.65 31.0009 34.65C25.8646 34.65 21.7009 30.4191 21.7009 25.2C21.7009 19.9809 25.8646 15.75 31.0009 15.75C36.1371 15.75 40.3009 19.9809 40.3009 25.2ZM37.2009 25.2C37.2009 28.6794 34.425 31.5 31.0009 31.5C27.5767 31.5 24.8009 28.6794 24.8009 25.2C24.8009 21.7206 27.5767 18.9 31.0009 18.9C34.425 18.9 37.2009 21.7206 37.2009 25.2Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+        <path d="M31.0009 39.375C20.9656 39.375 12.4152 45.4047 9.1582 53.8525C9.95164 54.6531 10.7875 55.4103 11.662 56.1205C14.0873 48.3646 21.6958 42.525 31.0009 42.525C40.306 42.525 47.9144 48.3646 50.3398 56.1205C51.2143 55.4103 52.0501 54.6531 52.8435 53.8525C49.5865 45.4048 41.0362 39.375 31.0009 39.375Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+        </svg>
+    </div>
+    <div data-layer="Hương" class="Huong" >Hương</div>
+    <div data-layer="Trang chủ" class="TrangChu" >Trang chủ</div>
+    <div data-layer="Giới thiệu" class="GioiThieu" >Giới thiệu</div>
+    <div data-layer="Thông báo" class="ThongBao">Thông báo</div>
+
+    <div data-layer="Rectangle 68" class="Rectangle68" ></div>
+    <div data-layer="Chiến dịch Marketing gợi ý" class="ChienDichMarketingGoiY" >Chiến dịch Marketing gợi ý</div>
+
+    {% if campaign_details %}
+      <div data-layer="Nội dung chiến dịch" class="NoiDungChienDich" >{{ campaign_details.description }}</div>
+      <div data-layer="Đề xuất lựa chọn:" class="DeXuatLuuChon" >Đề xuất lựa chọn:</div>
+      <div data-layer="Chiến dịch được đề xuất" class="ChienLuocDuocDeXuat" >{{ campaign_details.name }}</div>
+    {% else %}
+      <div data-layer="Nội dung chiến dịch" class="NoiDungChienDich" >Vui lòng chọn một chiến dịch từ menu bên dưới và nhấn "Xem".</div>
+    {% endif %}
+
+    <div data-svg-wrapper data-layer="Arrow 1" class="Arrow1" >
+      <svg width="46" height="15" viewBox="0 0 46 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M45.7071 8.07088C46.0976 7.68035 46.0976 7.04719 45.7071 6.65666L39.3431 0.292702C38.9526 -0.0978227 38.3195 -0.0978227 37.9289 0.292702C37.5384 0.683226 37.5384 1.31639 37.9289 1.70692L43.5858 7.36377L37.9289 13.0206C37.5384 13.4111 37.5384 14.0443 37.9289 14.4348C38.3195 14.8254 38.9526 14.8254 39.3431 14.4348L45.7071 8.07088ZM0 7.36377V8.36377H45V7.36377V6.36377H0V7.36377Z" fill="black"/>
+      </svg>
+    </div>
+
+    <form class="campaign-container"
+    action="{{ url_for('strategy.view_strategy') }}"
+    method="POST">
+
+  <label for="campaignSelect">Tên chiến dịch Marketing</label>
+
+  <select id="campaignSelect" name="campaign_id" class="campaign-select">
+    <option value="">-- Chọn chiến dịch --</option>
+
+    {% if campaign_details and campaign_details.id == 'chien_dich_a' %}
+      <option value="chien_dich_a" selected>Chiến dịch A</option>
+    {% else %}
+      <option value="chien_dich_a">Chiến dịch A</option>
+    {% endif %}
+
+    {% if campaign_details and campaign_details.id == 'chien_dich_b' %}
+      <option value="chien_dich_b" selected>Chiến dịch B</option>
+    {% else %}
+      <option value="chien_dich_b">Chiến dịch B</option>
+    {% endif %}
+
+    {% if campaign_details and campaign_details.id == 'chien_dich_c' %}
+      <option value="chien_dich_c" selected>Chiến dịch C</option>
+    {% else %}
+      <option value="chien_dich_c">Chiến dịch C</option>
+    {% endif %}
+
+  </select>
+
+  <button type="submit" class="xem-btn">Xem</button>
+</form>
+
+    <div data-layer="Danh sách các khách hàng phù hợp" class="DanhSachKhachHangPhuHop" >Danh sách các khách hàng phù hợp</div>
+    <div class="table-customer">
+        <table class="styled-table">
+          <thead>
+          <tr>
+            <th>STT</th>
+            <th>Họ & Tên lót</th>
+            <th>Tên</th>
+            <th>Ngày sinh</th>
+            <th>Nữ</th>
+            <th>Thẻ tín dụng</th>
+            <th>Điểm tín dụng</th>
+            <th>Trạng thái thẻ</th>
+            <th>Ghi chú</th>
+          </tr>
+          </thead>
+          <tbody>
+            {% if customers %}
+              {% for customer in customers %}
+              <tr>
+                <td>{{ loop.index }}</td> <td>{{ customer.ho_lot }}</td>
+                <td>{{ customer.ten }}</td>
+                <td>{{ customer.ngay_sinh }}</td>
+                <td>{{ 'x' if customer.nu else '' }}</td>
+                <td>{{ customer.the_tin_dung }}</td>
+                <td>{{ customer.diem_tin_dung }}</td>
+                <td>{{ customer.trang_thai_the }}</td>
+                <td>{{ customer.ghi_chu }}</td>
+              </tr>
+              {% endfor %}
+            {% else %}
+              <tr>
+                <td colspan="9" style="text-align: center;">Không có dữ liệu khách hàng</td>
+              </tr>
+            {% endif %}
+          </tbody>
+    </table>
+    </div>
+
+    {% if campaign_details %}
+    <a href="{{ url_for('strategy.download_list', campaign_id=campaign_details.id) }}"
+       class="download-btn">
+       Tải về
+    </a>
+    {% endif %}
+
+</div></div><script>
+  function fitScreen() {
+    const designWidth = 1920;
+    const designHeight = 1080;
+    const scaleX = window.innerWidth / designWidth;
+    const scaleY = window.innerHeight / designHeight;
+    const scale = Math.min(scaleX, scaleY);
+    document.documentElement.style.setProperty('--scale', scale);
+  }
+
+  window.addEventListener('resize', fitScreen);
+  fitScreen();
+</script>
+</body>
+</html>

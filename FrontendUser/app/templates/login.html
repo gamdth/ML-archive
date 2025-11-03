@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun(d) | Đăng nhập</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+    <script>
+        function showForgotPasswordPopup() {
+            alert("Vui lòng liên hệ với chúng tôi để được hỗ trợ qua SĐT: 0123 456 789");
+            // Trả về false để ngăn thẻ <a> chuyển hướng đến '#'
+            return false;
+        }
+    </script>
+    <style>
+      /* ------------------------------------------------ */
+      /* STYLE CHỈNH SỬA CHO FLEXBOX (GHI ĐÈ CSS GỐC)    */
+      /* ------------------------------------------------ */
+
+      /* Đặt vị trí tuyệt đối cho FORM CHUNG */
+      .login-form {
+        position: absolute;
+        top: 300px;
+        left: 550px;
+        width: 340px;
+
+        /* Dùng Flexbox để xếp các thành phần con theo cột */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+      }
+
+      /* Ghi đè CSS cho NgNhP (Đăng nhập Heading) */
+      .NgNhP {
+        position: relative !important; /* Buộc phải dùng position relative để Flexbox quản lý */
+        left: auto !important;
+        top: auto !important;
+        align-self: flex-start; /* Căn lề trái */
+        margin-bottom: 25px;
+      }
+
+      .form-group {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      /* Style cho Label */
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #d8cffe;
+        font-weight: bold;
+      }
+
+      /* Style cho Input (Đã loại bỏ các class vị trí tuyệt đối cũ như Rectangle7) */
+      .form-group input {
+        width: 100%;
+        height: 40px;
+        background: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        border: none;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+
+      /* Ghi đè CSS cho NÚT ĐĂNG NHẬP (Rectangle9) để Flexbox quản lý */
+      .Rectangle9 {
+        width: 200px;
+        height: 50px;
+        background: #D8CFFE; /* Dùng màu từ ButtonDN gốc */
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+
+        /* Ghi đè các thuộc tính 'position: absolute', 'left', 'top' */
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        margin-top: 30px; /* Thêm khoảng cách với các options bên trên */
+
+        display: flex; /* Canh giữa chữ */
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Style cho nhóm Tùy chọn (Lưu mật khẩu & Quên mật khẩu) */
+      .form-options {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        margin-top: 15px;
+      }
+
+      .remember-group {
+        display: flex;
+        align-items: center;
+        /* Ghi đè các class vị trí tuyệt đối */
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+      }
+
+      .remember-group input {
+         margin-right: 5px;
+         /* Cần loại bỏ các style từ ULogin1CbLuumatkhau */
+         width: 20px;
+         height: 20px;
+      }
+
+      .remember-group label {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+
+      .ULogin1BQuenmatkhau {
+        color: white;
+        font-size: 16px;
+        text-decoration: underline;
+        /* Ghi đè các class vị trí tuyệt đối */
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+      }
+    </style>
+</head>
+<body>
+
+  <div data-layer="U_F_Login1" class="UFLogin1">
+    <img class="Image2" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+
+    <div data-layer="Rectangle 6" class="Rectangle6" ></div>
+
+    <form action="{{ url_for('auth.login') }}" method="POST" class="login-form">
+
+        <div class="NgNhP" >Đăng nhập</div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-options">
+            <div class="remember-group">
+                <input type="checkbox" id="remember" name="remember_me">
+                <label for="remember">Lưu mật khẩu</label>
+            </div>
+
+            <a href="#" class="ULogin1BQuenmatkhau" onclick="return showForgotPasswordPopup()">
+                Quên mật khẩu
+            </a>
+        </div>
+
+        <button type="submit" class="Rectangle9">
+            <span class="ButtonDN">Đăng nhập</span>
+        </button>
+
+    </form>
+
+    <div data-layer="Một sản phẩm thuộc Fun(d)" class="MTSaNPhMThuCFunD" >Một sản phẩm thuộc Fun(d)</div>
+  </div>
+
+</body>
+</html>

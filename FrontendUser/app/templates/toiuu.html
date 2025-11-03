@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun(d) | Tối ưu hóa chiến dịch</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/toiuu.css') }}">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Ẩn thanh trượt */
+    }
+
+    /* 2. THÊM CSS MỚI */
+    a.nav-link {
+        text-decoration: none;
+        color: inherit;
+    }
+    a.nav-link:hover [data-layer^="Rectangle"] {
+         opacity: 0.7;
+    }
+
+    /* CSS cho form chọn */
+    .campaign-container {
+      position: absolute;
+      left: 420px;
+      top: 130px;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      padding: 15px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    .campaign-container label {
+      font-weight: bold;
+    }
+    .campaign-container select {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      min-width: 200px;
+    }
+    .campaign-container .xem-btn {
+      padding: 10px 20px;
+      background-color: #8353A5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* CSS cho nút Tối ưu mới */
+    .ToiUuMoi-btn {
+      position: absolute;
+      bottom: 40px; /* Tùy chỉnh */
+      right: 40px; /* Tùy chỉnh */
+      padding: 12px 25px;
+      background-color: #5cb85c; /* Màu xanh lá */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none; /* Nếu dùng <a> */
+    }
+    .ToiUuMoi-btn:hover {
+      background-color: #4cae4c;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+<div data-layer="U_F_PhanLoai" class="UFPhanloai" style="width: 1440px; height: 1024px; position: relative; background: white; overflow: hidden">
+
+      {% include '_sidebar.html' %}
+      <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="GenericAvatar" style="left: 1318px; top: 52px; position: absolute">
+      <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="62" height="63" rx="31" fill="var(--Schemes-Primary-Container, #EADDFF)"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M40.3009 25.2C40.3009 30.4191 36.1371 34.65 31.0009 34.65C25.8646 34.65 21.7009 30.4191 21.7009 25.2C21.7009 19.9809 25.8646 15.75 31.0009 15.75C36.1371 15.75 40.3009 19.9809 40.3009 25.2ZM37.2009 25.2C37.2009 28.6794 34.425 31.5 31.0009 31.5C27.5767 31.5 24.8009 28.6794 24.8009 25.2C24.8009 21.7206 27.5767 18.9 31.0009 18.9C34.425 18.9 37.2009 21.7206 37.2009 25.2Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+        <path d="M31.0009 39.375C20.9656 39.375 12.4152 45.4047 9.1582 53.8525C9.95164 54.6531 10.7875 55.4103 11.662 56.1205C14.0873 48.3646 21.6958 42.525 31.0009 42.525C40.306 42.525 47.9144 48.3646 50.3398 56.1205C51.2143 55.4103 52.0501 54.6531 52.8435 53.8525C49.5865 45.4048 41.0362 39.375 31.0009 39.375Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+        </svg>
+    </div>
+    <div data-layer="Hương" class="Huong" >Hương</div>
+    <div data-layer="Trang chủ" class="TrangChu" >Trang chủ</div>
+    <div data-layer="Giới thiệu" class="GioiThieu" >Giới thiệu</div>
+    <div data-layer="Thông báo" class="ThongBao">Thông báo</div>
+
+  <form class="campaign-container" action="{{ url_for('optimize.view_optimize') }}" method="POST">
+    <label for="campaignSelect">Chiến dịch đã thực hiện</label>
+    <select id="campaignSelect" name="campaign_id" class="campaign-select">
+  <option value="">-- Tất cả chiến dịch --</option>
+  <option value="chien_dich_a" {% if selected_id == 'chien_dich_a' %} selected{% endif %}>Chiến dịch A</option>
+  <option value="chien_dich_b" {% if selected_id == 'chien_dich_b' %} selected{% endif %}>Chiến dịch B</option>
+  <option value="chien_dich_c" {% if selected_id == 'chien_dich_c' %} selected{% endif %}>Chiến dịch C</option>
+</select>
+    <button type="submit" class="xem-btn">Xem</button>
+  </form>
+
+  <div data-layer="Lịch sử tối ưu chiến dịch" class="LichSuToiUuChienDich" >Lịch sử tối ưu chiến dịch</div>
+    <div class="table-strategy">
+        <table class="styled-table">
+          <thead>
+          <tr>
+            <th>STT</th>
+            <th>Tên chiến dịch</th>
+            <th>Ngày tối ưu</th>
+            <th>Ngày bắt đầu</th>
+            <th>Ngày kết thúc</th>
+            <th>Áp dụng</th>
+            <th>Ghi chú</th>
+          </tr>
+          </thead>
+          <tbody>
+            {% for item in history_list %}
+            <tr>
+              <td>{{ loop.index }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.optimize_date }}</td>
+              <td>{{ item.start_date }}</td>
+              <td>{{ item.end_date }}</td>
+              <td>{{ item.apply_to }}</td>
+              <td>{{ item.notes }}</td>
+            </tr>
+            {% endfor %}
+
+            {% if not history_list %}
+            <tr>
+              <td colspan="7" style="text-align: center; padding: 20px;">Không có dữ liệu lịch sử.</td>
+            </tr>
+            {% endif %}
+          </tbody>
+    </table>
+    </div>
+
+    <a href="{{ url_for('optimize.new_optimize') }}" class="ToiUuMoi-btn">Tối ưu mới</a>
+
+</div></div></body>
+<script>
+  function fitScreen() {
+    const designWidth = 1920;
+    const designHeight = 1080;
+    const scaleX = window.innerWidth / designWidth;
+    const scaleY = window.innerHeight / designHeight;
+    const scale = Math.min(scaleX, scaleY);
+    document.documentElement.style.setProperty('--scale', scale);
+  }
+
+  window.addEventListener('resize', fitScreen);
+  fitScreen();
+</script>
+</html>

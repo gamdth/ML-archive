@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun(d) | Quản lý dữ liệu</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dulieu.css') }}">
+  <style>
+    /* ... (CSS cũ giữ nguyên) ... */
+
+    .data-table-customer {
+      position: absolute;
+      top: 250px; /* Đặt dưới form upload */
+      left: 450px;
+      width: 950px; /* Chiều rộng lớn hơn để chứa nhiều cột */
+      max-height: 700px;
+      overflow-y: auto; /* Thêm thanh cuộn dọc nếu dữ liệu dài */
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .styled-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+    }
+    .styled-table th, .styled-table td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        white-space: nowrap; /* Ngăn chặn wrap chữ */
+    }
+    .styled-table th {
+        background-color: #8353A5; /* Màu tím */
+        color: white;
+        text-transform: capitalize;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+<div data-layer="U_F_PhanLoai" class="UFPhanloai" style="width: 1440px; height: 1024px; position: relative; background: white; overflow: hidden">
+
+      <div data-layer="Database" data-size="48" class="Database" >
+        </div>
+
+      {% include '_sidebar.html' %}
+
+      <div class="browse-dataset" style="position: absolute; left: 450px; top: 150px; width: 500px;">
+          <form action="{{ url_for('data.upload_data') }}" method="POST" enctype="multipart/form-data" class="upload-form">
+
+              <label id="fileLabel" for="fileInput">Chưa có dữ liệu được chọn</label>
+
+              <input type="file" id="fileInput" name="dataset_file" class="file-input" accept=".csv,.xlsx" />
+
+              <button type="button" class="browse-btn" onclick="document.getElementById('fileInput').click()">Browse</button>
+
+              <button type="submit" class="upload-btn">Tải lên</button>
+
+          </form>
+      </div>
+
+      <div class="data-table-customer">
+          <table class="styled-table">
+              <thead>
+              <tr>
+                  {# Lặp qua tên cột được truyền từ data/routes.py #}
+                  {% if all_columns %}
+                      {% for col in all_columns %}
+                          <th>{{ col | replace('_', ' ') | title }}</th>
+                      {% endfor %}
+                  {% else %}
+                       <th>STT</th>
+                       <th>Credit Score</th>
+                       <th>Country</th>
+                       {# ... các cột mặc định khác ... #}
+                  {% endif %}
+              </tr>
+              </thead>
+              <tbody>
+                  {% if customers %}
+                    {% for customer in customers %}
+                    <tr>
+                      {# Lặp qua các giá trị trong mỗi row #}
+                      {% for key in all_columns %}
+                          <td>{{ customer[key] }}</td>
+                      {% endfor %}
+                    </tr>
+                    {% endfor %}
+                  {% else %}
+                    <tr>
+                      {# colspan phải khớp với số lượng cột tối đa bạn muốn hiển thị #}
+                      <td colspan="15" style="text-align: center; padding: 20px;">
+                          Chưa có dữ liệu khách hàng nào được tải lên hoặc hiển thị.
+                      </td>
+                    </tr>
+                  {% endif %}
+              </tbody>
+          </table>
+      </div>
+      </div></div><script>
+  // Script này cập nhật tên file lên label
+  document.getElementById('fileInput').addEventListener('change', function() {
+    var fileLabel = document.getElementById('fileLabel');
+    if (this.files.length > 0) {
+      // Hiển thị tên file đã chọn
+      fileLabel.textContent = this.files[0].name;
+    } else {
+      // Quay về mặc định nếu không chọn file
+      fileLabel.textContent = 'Chưa có dữ liệu được chọn';
+    }
+  });
+
+  // (Phần script fitScreen của bạn giữ nguyên)
+  function fitScreen() {
+    const designWidth = 1920;
+    const designHeight = 1080;
+    const scaleX = window.innerWidth / designWidth;
+    const scaleY = window.innerHeight / designHeight;
+    const scale = Math.min(scaleX, scaleY);
+    document.documentElement.style.setProperty('--scale', scale);
+  }
+
+  window.addEventListener('resize', fitScreen);
+  fitScreen();
+</script>
+</body>
+</html>
