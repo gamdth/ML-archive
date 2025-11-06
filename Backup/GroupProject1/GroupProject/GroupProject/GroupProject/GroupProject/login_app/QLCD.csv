@@ -1,0 +1,13 @@
+STT,Chiến dịch,Điều kiện áp dụng,Người tạo,Ngân sách,Bắt đầu,Kết thúc
+1,Marketing A,abc,User01,"2,000,000",2/10/2025,12/10/2025
+2,Marketing B,abc,User02,"8,000,000",3/10/2025,13/10/2025
+3,Marketing C,abc,User03,"10,000,000",4/10/2025,14/10/2025
+4,Marketing A,abc,User04,"2,000,000",5/10/2025,15/10/2025
+5,Marketing B,abc,User05,"8,000,000",6/10/2025,16/10/2025
+6,Marketing C,abc,User06,"10,000,000",7/10/2025,17/10/2025
+7,Marketing A,abc,User07,"2,000,000",8/10/2025,18/10/2025
+8,Marketing B,abc,User08,"8,000,000",9/10/2025,19/10/2025
+9,Marketing C,abc,User09,"10,000,000",10/10/2025,20/10/2025
+10,Marketing A,abc,User10,"2,000,000",11/10/2025,21/10/2025
+11,Marketing B,abc,User11,"8,000,000",12/10/2025,22/10/2025
+12,Marketing C,abc,User12,"10,000,000",13/10/2025,23/10/2025

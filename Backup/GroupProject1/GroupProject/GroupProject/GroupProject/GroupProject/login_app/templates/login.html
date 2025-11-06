@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+</head>
+<body>
+<div style="width: 1440px; height: 1024px; position: relative; background: #FFFCFC; overflow: hidden">
+
+  <!-- Ảnh nền -->
+  <img style="width: 3082px; height: 2854px; left: -796px; top: -915px; position: absolute; opacity: 0.50; z-index: 0;"
+       src="{{ url_for('static', filename='LogoFun_d_-remove.png') }}" alt="Logo"/>
+
+  <!-- Form bắt đầu -->
+  <form action="/login" method="POST">
+
+    <!-- Khung chính -->
+    <div style="width: 439px; height: 567px; left: 500px; top: 221px; position: absolute; opacity: 0.85;
+                background: linear-gradient(90deg, #0D0D55 12%, #8A53A5 98%);
+                border-radius: 15px; z-index: 1;"></div>
+
+    <!-- Logo -->
+    <img style="width: 234px; height: 217px; left: 752px; top: 184px; position: absolute;
+                opacity: 0.50; z-index: 2;"
+         src="{{ url_for('static', filename='LogoFun_d_-remove.png') }}" alt="Logo">
+
+    <!-- Tiêu đề -->
+    <div style="left: 550px; top: 314px; position: absolute; color: white; font-size: 30px;
+                font-family: Bona Nova; font-weight: 700; word-wrap: break-word;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); z-index: 5;">ĐĂNG NHẬP</div>
+
+    <!-- Ô nhập Email -->
+    <div style="width: 340px; height: 40px; left: 550px; top: 397px; position: absolute;
+                background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 5px; z-index: 5;">
+      <input type="email" name="email" placeholder="Email" required
+             style="width: 100%; height: 100%; border: none; outline: none;
+                    font-size: 16px; padding-left: 10px; background: transparent; color: #0A0B5B;">
+    </div>
+
+    <!-- Ô nhập mật khẩu -->
+    <div style="width: 340px; height: 40px; left: 550px; top: 469px; position: absolute;
+                background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 5px; z-index: 5;">
+      <input type="password" name="password" placeholder="Mật khẩu" required
+             style="width: 100%; height: 100%; border: none; outline: none;
+                    font-size: 16px; padding-left: 10px; background: transparent; color: #0A0B5B;">
+    </div>
+
+    <!-- Quên mật khẩu -->
+    <a href="{{ url_for('forgetpassword') }}"
+       style="left: 776px; top: 519px; position: absolute; color: white; font-size: 16px;
+              font-family: Inter; font-style: italic; font-weight: 400;
+              text-decoration: underline; word-wrap: break-word; z-index: 5;
+              cursor: pointer;">
+      Quên mật khẩu
+    </a>
+
+    <!-- Checkbox -->
+    <div style="width: 24px; height: 24px; left: 549px; top: 564px; position: absolute; overflow: hidden; z-index: 5;">
+      <input type="checkbox" name="remember" style="width: 100%; height: 100%; margin: 0; cursor: pointer;">
+    </div>
+    <div style="left: 580px; top: 566px; position: absolute; text-align: center; color: white;
+                font-size: 16px; font-family: Inter; font-style: italic; font-weight: 400;
+                word-wrap: break-word; z-index: 5;">Lưu mật khẩu cho lần đăng nhập sau</div>
+
+    <!-- Nút thật -->
+    <button type="submit"
+            style="width: 156.23px; height: 40px; left: 653px; top: 610px; position: absolute;
+                   border: none; border-radius: 10px; background: #D8CFFE; color: #0A0B5B;
+                   font-size: 16px; font-family: Inter; font-weight: 800; cursor: pointer; z-index: 6;">
+      Đăng nhập
+    </button>
+
+    <!-- Nút nền -->
+    <div style="width: 156.23px; height: 40px; left: 653px; top: 610px; position: absolute;
+                opacity: 0.85; background: #D8CFFE; border-radius: 10px; z-index: 4;
+                pointer-events: none;"></div>
+
+    <!-- Footer -->
+    <div style="left: 717px; top: 757px; position: absolute; color: white; font-size: 14px;
+                font-family: Inter; font-weight: 400; word-wrap: break-word; z-index: 5;">
+      Một sản phẩm thuộc Fun(d)
+    </div>
+
+  </form>
+  <!-- Form kết thúc -->
+
+</div>
+  <script>
+function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  fetch("data.json")
+    .then(res => res.json())
+    .then(users => {
+      const user = users.find(u => u.username === username && u.password === password);
+      if (user) {
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        alert("Đăng nhập thành công!");
+        window.location.href = "profile.html"; // chuyển sang trang hồ sơ
+      } else {
+        alert("Sai tài khoản hoặc mật khẩu!");
+      }
+    });
+}
+</script>
+</body>
+</html>
