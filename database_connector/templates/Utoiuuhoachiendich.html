@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tối ưu hóa chiến dịch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Utoiuuhoachiendich.css') }}">
+
+    <style>
+        .content-container {
+            position: absolute;
+            top: 200px;
+            left: 350px;
+            right: 50px;
+            font-family: Arial, sans-serif;
+            color: #333;
+            z-index: 100;
+        }
+        .styled-table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        .change-positive { color: #5CB85C; font-weight: bold; }
+        .change-negative { color: #D9534F; font-weight: bold; }
+
+        .flash-message {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .flash-error { color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; }
+        .flash-success { color: #155724; background-color: #d4edda; border-color: #c3e6cb; }
+
+        /* (MỚI) CSS cho Form Huấn Luyện */
+        .train-form-box {
+            background: #f0f2f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+        .train-form-box h3 { margin-top: 0; }
+        .train-form-box select, .train-form-box button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+        .train-form-box button {
+            background-color: #d9534f;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="a_f_quanlinguoidung1">
+
+            <div data-layer="Rectangle 17" class="rectangle-17"></div>
+            <div class="search-bar">
+                  <div class="state-layer_01"> <div class="leading-icon"> <div class="content"> <div class="state-layer"> <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                            </svg>
+                          </div> </div> </div> </div>
+                    <div class="content_01"> <div class="a_t_search_chucnang">
+                        <input type="text" class="a_t_search_chucnang_input" placeholder="Tìm kiếm chức năng" /> </div>
+                    </div>
+                    <div class="a_icon_search_chucnang"> <div class="instance-1st-trailing-icon"> <div class="content_02"> <div class="state-layer_01"> <div class="icon_01">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                              </svg>
+                            </div> </div> </div> </div> </div> </div>
+            </div>
+            <a href="{{ url_for('Uquanlidulieu') }}" class="sidebar-button" style="top: 370px;">
+                <div data-layer="Rectangle 10" class="rectangle-10"></div>
+                <div data-layer="Tổng quan" class="tng-quan"><span class="tngquan_span">Quản lí dữ liệu</span></div>
+            </a>
+            <a href="{{ url_for('Uthongke') }}" class="sidebar-button" style="top: 487px;">
+                <div data-layer="Rectangle 11" class="rectangle-11"></div>
+                <div data-layer="Quản lí dữ liệu" class="qun-l-d-liu"><span class="qunldliu_span">Thống kê</span></div>
+            </a>
+            <a href="{{ url_for('Uphanloaikhachhang') }}" class="sidebar-button" style="top: 604px;">
+                <div data-layer="Rectangle 12" class="rectangle-12"></div>
+                <div data-layer="Quản lí người dùng" class="qun-l-ngi-dng"><span class="qunlngidng_span">Phân loại khách hàng</span></div>
+            </a>
+            <a href="{{ url_for('Uchienluocgoiytudong') }}" class="sidebar-button" style="top: 721px;">
+                <div data-layer="Rectangle 13" class="rectangle-13"></div>
+                <div data-layer="Quản lí hoạt động" class="qun-l-hot-ng"><span class="qunlhotng_span">Chiến lược gợi ý tự động</span></div>
+            </a>
+            <a href="{{ url_for('Utoiuuhoachiendich') }}" class="sidebar-button" style="top: 838px;">
+                <div data-layer="Rectangle 14" class="rectangle-14" style="background: #FC94AF; opacity: 0.80;"></div>
+                <div data-layer="Quản lí các chiến dịch" class="qun-l-cc-chin-dch"><span class="qunlccchindch_span">Tối ưu hóa chiến dịch</span></div>
+            </a>
+            <img data-layer="image 2" class="image-2" src="data:image/png;base64,...(dữ liệu ảnh được giữ nguyên)..." />
+            <div data-layer="Slogan gì đó" class="slogan-g-"><span class="slogang_span">Slogan gì đó</span></div>
+            <div data-layer="Trang chủ" class="trang-ch"><a href="{{ url_for('uhome_page') }}">Trang chủ</a></div>
+            <div data-layer="Giới thiệu" class="gii-thiu"><a href="{{ url_for('gioithieu') }}">Giới thiệu</a></div>
+            <div class="gioithieu-btn" onclick="toggleThongBao(event)">
+                <div data-layer="Thông báo" class="thng-bo">Thông báo</div>
+                <div id="dropdownThongBao" class="dropdown-thongbao">
+                    </div>
+            </div>
+            <div class="profile-container" onclick="toggleProfileMenu(event)">
+                <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="generic-avatar">
+                    </div>
+                <div data-layer="Hương" class="hng"><span class="hng_span">Hương</span></div>
+                <div id="dropdownProfile" class="dropdown-profile">
+                    </div>
+            </div>
+
+            <div class="content-container">
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="flash-message flash-{{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <div class="train-form-box">
+                    <h3>Huấn Luyện Model Mới (Re-train)</h3>
+                    <p>Chọn một dataset (12 cột, có 'churn') để huấn luyện lại mô hình.</p>
+                    <form action="{{ url_for('retrain_model') }}" method="POST">
+                        <label for="dataset_id">Chọn Dataset để huấn luyện:</label>
+                        <select name="dataset_id" id="dataset_id" required>
+                            <option value="" disabled selected>-- Chọn Dataset (phải có churn) --</option>
+                            {% for ds in available_datasets %}
+                                <option value="{{ ds.dataset_id }}">{{ ds.file_path }} (ID: {{ ds.dataset_id }})</option>
+                            {% endfor %}
+                        </select>
+                        <button type="submit">Bắt đầu Huấn Luyện</button>
+                    </form>
+                </div>
+
+
+                <h2>Lịch sử Hiệu suất (So sánh các lần Train)</h2>
+
+                {% if all_runs %}
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Run ID</th>
+                                <th>Ngày chạy</th>
+                                <th>Dataset đã dùng</th>
+                                <th>Hiệu suất (AUC)</th>
+                                <th>Thay đổi (so với Run trước)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for run in all_runs %}
+                            <tr>
+                                <td><strong>{{ run.run_id }}</strong></td>
+                                <td>{{ run.run_date.strftime('%Y-%m-%d %H:%M') if run.run_date else 'N/A' }}</td>
+                                <td>{{ run.file_path }}</td>
+                                <td><strong>{{ (run.performance_metric * 100) | round(2) }}%</strong></td>
+
+                                {% if run.change_pct > 0.01 %}
+                                    <td class="change-positive">
+                                        +{{ run.change_pct | round(2) }}%
+                                    </td>
+                                {% elif run.change_pct < -0.01 %}
+                                    <td class="change-negative">
+                                        {{ run.change_pct | round(2) }}%
+                                    </td>
+                                {% else %}
+                                    <td>--</td>
+                                {% endif %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>Chưa có dữ liệu huấn luyện nào được ghi nhận.</p>
+                {% endif %}
+
+            </div> </div> </div> <script>
+    // (Giữ nguyên JavaScript của bạn)
+    function toggleThongBao(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownProfile").classList.remove("show");
+            document.getElementById("dropdownThongBao").classList.toggle("show");
+        }
+
+        function toggleProfileMenu(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownThongBao").classList.remove("show");
+            document.getElementById("dropdownProfile").classList.toggle("show");
+        }
+
+        document.addEventListener("click", function(e) {
+            const dropdownThongBao = document.getElementById("dropdownThongBao");
+            const btnThongBao = document.querySelector(".thng-bo");
+
+            const dropdownProfile = document.getElementById("dropdownProfile");
+            const btnProfile = document.querySelector(".profile-container");
+
+            if (btnThongBao && dropdownThongBao && !btnThongBao.contains(e.target) && !dropdownThongBao.contains(e.target)) {
+                dropdownThongBao.classList.remove("show");
+            }
+
+            if (btnProfile && dropdownProfile && !btnProfile.contains(e.target) && !btnProfile.contains(e.target)) {
+                dropdownProfile.classList.remove("show");
+            }
+        });
+</script>
+
+</body>
+</html>

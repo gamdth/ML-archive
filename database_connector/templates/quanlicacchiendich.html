@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lí Model (Thuật toán)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quanlicacchiendich.css') }}">
+
+    <style>
+        .a_caidat {
+            position: absolute;
+            top: 200px; /* Căn dưới header */
+            left: 350px; /* Căn lề với sidebar */
+            right: 50px; /* Lề phải */
+            font-family: Arial, sans-serif;
+        }
+        .quan-ly-ngi-dung {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .data-table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+        .styled-table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            word-wrap: break-word;
+        }
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="a_f_quanlinguoidung1">
+
+            <div data-layer="Rectangle 17" class="rectangle-17"></div>
+
+            <div class="search-bar">
+                  <div class="state-layer_01"> <div class="leading-icon"> <div class="content"> <div class="state-layer"> <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                            </svg>
+                          </div> </div> </div> </div>
+                    <div class="content_01"> <div class="a_t_search_chucnang">
+                        <input type="text" class="a_t_search_chucnang_input" placeholder="Tìm kiếm chức năng" /> </div>
+                    </div>
+
+                    <div class="a_icon_search_chucnang"> <div class="instance-1st-trailing-icon"> <div class="content_02"> <div class="state-layer_01"> <div class="icon_01">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                              </svg>
+                            </div> </div> </div> </div> </div> </div>
+            </div>
+            <a href="{{ url_for('tongquan') }}" class="sidebar-button" style="top: 370px;">
+                <div data-layer="Rectangle 10" class="rectangle-10"></div>
+                <div data-layer="Tổng quan" class="tng-quan"><span class="tngquan_span">Tổng quan</span></div>
+            </a>
+            <a href="{{ url_for('quanlidulieu') }}" class="sidebar-button" style="top: 487px;">
+                <div data-layer="Rectangle 11" class="rectangle-11"></div>
+                <div data-layer="Quản lí dữ liệu" class="qun-l-d-liu"><span class="qunldliu_span">Quản lí dữ liệu</span></div>
+            </a>
+            <a href="{{ url_for('quanlinguoidung1') }}" class="sidebar-button" style="top: 604px;">
+                <div data-layer="Rectangle 12" class="rectangle-12"></div>
+                <div data-layer="Quản lí người dùng" class="qun-l-ngi-dng"><span class="qunlngidng_span">Quản lí người dùng</span></div>
+            </a>
+            <a href="{{ url_for('quanlihoatdong') }}" class="sidebar-button" style="top: 721px;">
+                <div data-layer="Rectangle 13" class="rectangle-13"></div>
+                <div data-layer="Quản lí hoạt động" class="qun-l-hot-ng"><span class="qunlhotng_span">Quản lí hoạt động</span></div>
+            </a>
+            <a href="{{ url_for('quanlicacchiendich') }}" class="sidebar-button" style="top: 838px;">
+                <div data-layer="Rectangle 14" class="rectangle-14" style="background: #FC94AF; opacity: 0.80;"></div>
+                <div data-layer="Quản lí các chiến dịch" class="qun-l-cc-chin-dch"><span class="qunlccchindch_span">Quản lí các chiến dịch</span></div>
+            </a>
+            <img data-layer="image 2" class="image-2" src="data:image/png;base64,...(dữ liệu ảnh được giữ nguyên)..." />
+            <div data-layer="Slogan gì đó" class="slogan-g-"><span class="slogang_span">Slogan gì đó</span></div>
+            <div data-layer="Trang chủ" class="trang-ch"><a href="{{ url_for('home_page') }}">Trang chủ</a></div>
+            <div data-layer="Giới thiệu" class="gii-thiu"><a href="{{ url_for('gioithieu') }}">Giới thiệu</a></div>
+            <div class="gioithieu-btn" onclick="toggleThongBao(event)">
+                <div data-layer="Thông báo" class="thng-bo">Thông báo</div>
+                <div id="dropdownThongBao" class="dropdown-thongbao">
+                    </div>
+            </div>
+            <div class="profile-container" onclick="toggleProfileMenu(event)">
+                <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="generic-avatar">
+                    </div>
+                <div data-layer="Hương" class="hng"><span class="hng_span">{{ session.user.name | default('Admin') }}</span></div>
+                <div id="dropdownProfile" class="dropdown-profile">
+                    </div>
+            </div>
+
+            <div class="a_caidat">
+                <div data-layer="Quản lý người dùng" class="quan-ly-ngi-dung">
+                    <span class="quanlyngidung_span">Quản lý Model (Thuật toán)</span>
+                </div>
+
+                <div class="data-table-container">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Model ID</th>
+                                    <th>Tên Model</th>
+                                    <th>Mô tả (Description)</th>
+                                    <th>Ngày tạo</th>
+                                    <th>Trạng thái</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if models %}
+                                    {% for model in models %}
+                                    <tr>
+                                        <td>{{ model.model_id }}</td>
+                                        <td>{{ model.model_name }}</td>
+                                        <td>{{ model.description }}</td>
+                                        <td>{{ model.created_date.strftime('%Y-%m-%d') if model.created_date else 'N/A' }}</td>
+                                        <td>{{ model.status }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <tr>
+                                        <td colspan="5" style="text-align: center;">Không có model nào trong CSDL.</td>
+                                    </tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                </div>
+
+        </div>
+    </div>
+    <script>
+        // (Giữ nguyên JavaScript của bạn)
+        function toggleThongBao(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownProfile").classList.remove("show");
+            document.getElementById("dropdownThongBao").classList.toggle("show");
+        }
+
+        function toggleProfileMenu(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownThongBao").classList.remove("show");
+            document.getElementById("dropdownProfile").classList.toggle("show");
+        }
+
+        document.addEventListener("click", function(e) {
+            const dropdownThongBao = document.getElementById("dropdownThongBao");
+            const btnThongBao = document.querySelector(".thng-bo");
+
+            const dropdownProfile = document.getElementById("dropdownProfile");
+            const btnProfile = document.querySelector(".profile-container");
+
+            if (btnThongBao && dropdownThongBao && !btnThongBao.contains(e.target) && !dropdownThongBao.contains(e.target)) {
+                dropdownThongBao.classList.remove("show");
+            }
+
+            if (btnProfile && dropdownProfile && !btnProfile.contains(e.target) && !btnProfile.contains(e.target)) {
+                dropdownProfile.classList.remove("show");
+            }
+        });
+    </script>
+</body>
+</html>

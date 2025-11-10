@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chiến lược gợi ý</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Uchienluocgoiytudong.css') }}">
+
+    <style>
+        .content-container {
+            position: absolute;
+            top: 200px; /* Căn dưới header */
+            left: 350px; /* Căn lề với sidebar */
+            right: 50px; /* Lề phải */
+            font-family: Arial, sans-serif;
+            color: #333;
+            z-index: 100;
+        }
+        .suggestion-box {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            max-width: 800px; /* Giới hạn chiều rộng */
+        }
+        .suggestion-box h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-top: 0;
+        }
+        .suggestion-box p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        .suggestion-arrow {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .suggestion-arrow span {
+            margin-right: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        .suggestion-arrow b {
+            color: #007bff;
+        }
+        .action-box {
+            background-color: #fce7f0; /* Màu hồng nhạt */
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px; /* Giới hạn chiều rộng */
+        }
+        .action-box select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            min-width: 200px;
+        }
+        .action-box button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .flash-message {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .flash-error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="a_f_quanlinguoidung1">
+
+            <div data-layer="Rectangle 17" class="rectangle-17"></div>
+            <div class="search-bar">
+                  <div class="state-layer_01"> <div class="leading-icon"> <div class="content"> <div class="state-layer"> <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                            </svg>
+                          </div> </div> </div> </div>
+                    <div class="content_01"> <div class="a_t_search_chucnang">
+                        <input type="text" class="a_t_search_chucnang_input" placeholder="Tìm kiếm chức năng" /> </div>
+                    </div>
+                    <div class="a_icon_search_chucnang"> <div class="instance-1st-trailing-icon"> <div class="content_02"> <div class="state-layer_01"> <div class="icon_01">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                              </svg>
+                            </div> </div> </div> </div> </div> </div>
+            </div>
+            <a href="{{ url_for('Uquanlidulieu') }}" class="sidebar-button" style="top: 370px;">
+                <div data-layer="Rectangle 10" class="rectangle-10"></div>
+                <div data-layer="Tổng quan" class="tng-quan"><span class="tngquan_span">Quản lí dữ liệu</span></div>
+            </a>
+            <a href="{{ url_for('Uthongke') }}" class="sidebar-button" style="top: 487px;">
+                <div data-layer="Rectangle 11" class="rectangle-11"></div>
+                <div data-layer="Quản lí dữ liệu" class="qun-l-d-liu"><span class="qunldliu_span">Thống kê</span></div>
+            </a>
+            <a href="{{ url_for('Uphanloaikhachhang') }}" class="sidebar-button" style="top: 604px;">
+                <div data-layer="Rectangle 12" class="rectangle-12"></div>
+                <div data-layer="Quản lí người dùng" class="qun-l-ngi-dng"><span class="qunlngidng_span">Phân loại khách hàng</span></div>
+            </a>
+            <a href="{{ url_for('Uchienluocgoiytudong') }}" class="sidebar-button" style="top: 721px;">
+                <div data-layer="Rectangle 13" class="rectangle-13" style="background: #FC94AF; opacity: 0.70;"></div>
+                <div data-layer="Quản lí hoạt động" class="qun-l-hot-ng"><span class="qunlhotng_span">Chiến lược gợi ý tự động</span></div>
+            </a>
+            <a href="{{ url_for('Utoiuuhoachiendich') }}" class="sidebar-button" style="top: 838px;">
+                <div data-layer="Rectangle 14" class="rectangle-14"></div>
+                <div data-layer="Quản lí các chiến dịch" class="qun-l-cc-chin-dch"><span class="qunlccchindch_span">Tối ưu hóa chiến dịch</span></div>
+            </a>
+
+            <img data-layer="image 2" class="image-2" src="data:image/png;base64,...(dữ liệu ảnh được giữ nguyên)..." />
+            <div data-layer="Slogan gì đó" class="slogan-g-"><span class="slogang_span">Slogan gì đó</span></div>
+            <div data-layer="Trang chủ" class="trang-ch"><a href="{{ url_for('uhome_page') }}">Trang chủ</a></div>
+            <div data-layer="Giới thiệu" class="gii-thiu"><a href="{{ url_for('gioithieu') }}">Giới thiệu</a></div>
+
+            <div class="gioithieu-btn" onclick="toggleThongBao(event)">
+                <div data-layer="Thông báo" class="thng-bo">Thông báo</div>
+                <div id="dropdownThongBao" class="dropdown-thongbao">
+                    </div>
+            </div>
+            <div class="profile-container" onclick="toggleProfileMenu(event)">
+                <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="generic-avatar">
+                    </div>
+                <div data-layer="Hương" class="hng"><span class="hng_span">Hương</span></div>
+                <div id="dropdownProfile" class="dropdown-profile">
+                    </div>
+            </div>
+
+            <div class="content-container">
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="flash-message flash-{{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                {% if stats.total > 0 %}
+                    <div class="suggestion-box">
+                        <h3>Chiến dịch Marketing gợi ý</h3>
+                        <p>Dựa trên kết quả dự đoán mới nhất (Run ID: {{ stats.latest_run_id }}) cho {{ stats.total }} khách hàng:</p>
+
+                        <p>
+                            <strong>Chiến dịch A (Giữ chân Khẩn cấp) - {{ stats.high_risk }} khách hàng</strong><br>
+                            Mô tả: Gửi mail, gửi voucher, gọi điện thoại CSKH.<br>
+                            Đối tượng áp dụng: Khách hàng rủi ro cao (trên 70%).
+                        </p>
+
+                        <p>
+                            <strong>Chiến dịch B (Tăng cường Gắn kết) - {{ stats.medium_risk }} khách hàng</strong><br>
+                            Mô tả: Gửi Email Marketing cá nhân hóa, tặng điểm thưởng.<br>
+                            Đối tượng áp dụng: Khách hàng rủi ro trung bình (40% - 70%).
+                        </p>
+
+                        <p>
+                            <strong>Chiến dịch C (Bán chéo/Upsell) - {{ stats.low_risk }} khách hàng</strong><br>
+                            Mô tả: Giới thiệu sản phẩm mới, gói vay ưu đãi.<br>
+                            Đối tượng áp dụng: Khách hàng rủi ro thấp (dưới 40%).
+                        </p>
+
+                        <div class="suggestion-arrow">
+                            <span>Đề xuất lựa chọn:</span>
+                            <svg width="46" height="15" viewBox="0 0 46 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 10px;">
+                                <path d="M45.7071 8.07112C46.0976 7.6806 46.0976 7.04743 45.7071 6.65691L39.3431 0.292946C38.9526 -0.0975785 38.3195 -0.0975785 37.9289 0.292946C37.5384 0.68347 37.5384 1.31664 37.9289 1.70716L43.5858 7.36401L37.9289 13.0209C37.5384 13.4114 37.5384 14.0446 37.9289 14.4351C38.3195 14.8256 38.9526 14.8256 39.3431 14.4351L45.7071 8.07112ZM0 7.36401V8.36401H45V7.36401V6.36401H0V7.36401Z" fill="black"/>
+                            </svg>
+                            <b>Chiến dịch A</b>
+                        </div>
+                    </div>
+
+                    <form action="{{ url_for('Uphanloaikhachhang') }}" method="GET" class="action-box">
+                        <label for="campaign_select">Tên chiến dịch Marketing</label>
+                        <select id="campaign_select" name="sort_by">
+                            <option value="churn_probability" selected>Chiến dịch A (Rủi ro cao)</option>
+                            <option value="balance" disabled>Chiến dịch B (Rủi ro TB)</option>
+                            <option value="age" disabled>Chiến dịch C (Rủi ro thấp)</option>
+                        </select>
+                        <input type="hidden" name="sort_order" value="DESC">
+                        <button type="submit">Xem</button>
+                    </form>
+
+                {% else %}
+                    <div class="suggestion-box">
+                        <h3>Chưa có dữ liệu dự đoán</h3>
+                        <p>Vui lòng upload file tại trang "Quản lí dữ liệu" để chạy dự đoán và nhận gợi ý chiến lược.</p>
+                    </div>
+                {% endif %}
+
+            </div> </div> </div> <script>
+    // (Giữ nguyên JavaScript của bạn)
+    function toggleThongBao(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownProfile").classList.remove("show");
+            document.getElementById("dropdownThongBao").classList.toggle("show");
+        }
+
+        function toggleProfileMenu(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownThongBao").classList.remove("show");
+            document.getElementById("dropdownProfile").classList.toggle("show");
+        }
+
+        document.addEventListener("click", function(e) {
+            const dropdownThongBao = document.getElementById("dropdownThongBao");
+            const btnThongBao = document.querySelector(".thng-bo");
+
+            const dropdownProfile = document.getElementById("dropdownProfile");
+            const btnProfile = document.querySelector(".profile-container");
+
+            if (btnThongBao && dropdownThongBao && !btnThongBao.contains(e.target) && !dropdownThongBao.contains(e.target)) {
+                dropdownThongBao.classList.remove("show");
+            }
+
+            if (btnProfile && dropdownProfile && !btnProfile.contains(e.target) && !btnProfile.contains(e.target)) {
+                dropdownProfile.classList.remove("show");
+            }
+        });
+</script>
+
+</body>
+</html>

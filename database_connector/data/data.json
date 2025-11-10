@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Nguyễn Văn A",
+    "email": "nguyenvana@gmail.com",
+    "password": "123456",
+    "role": "Trưởng phòng Marketing",
+    "permission": "Super Admin"
+  },
+  {
+    "name": "Nguyễn Văn B",
+    "email": "nguyenvanb@gmail.com",
+    "password": "654321",
+    "role": "Nhân viên",
+    "permission": "User"
+  }
+]

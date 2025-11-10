@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cài đặt</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/caidat.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="a_f_caidat">
+        <div data-layer="Rectangle 17" class="rectangle-17"></div>
+
+            <div class="search-bar">
+                  <div class="state-layer_01"> <div class="leading-icon"> <div class="content"> <div class="state-layer"> <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                            </svg>
+                          </div> </div> </div> </div>
+                    <div class="content_01"> <div class="a_t_search_chucnang">
+                        <input type="text" class="a_t_search_chucnang_input" placeholder="Tìm kiếm chức năng" /> </div>
+                    </div>
+
+                    <div class="a_icon_search_chucnang"> <div class="instance-1st-trailing-icon"> <div class="content_02"> <div class="state-layer_01"> <div class="icon_01">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                              </svg>
+                            </div> </div> </div> </div> </div> </div>
+            </div>
+
+            <a href="{{ url_for('tongquan') }}" class="sidebar-button" style="top: 370px;">
+                <div data-layer="Rectangle 10" class="rectangle-10"></div>
+                <div data-layer="Tổng quan" class="tng-quan"><span class="tngquan_span">Tổng quan</span></div>
+            </a>
+            <a href="{{ url_for('quanlidulieu') }}" class="sidebar-button" style="top: 487px;">
+                <div data-layer="Rectangle 11" class="rectangle-11"></div>
+                <div data-layer="Quản lí dữ liệu" class="qun-l-d-liu"><span class="qunldliu_span">Quản lí dữ liệu</span></div>
+            </a>
+            <a href="{{ url_for('quanlinguoidung1') }}" class="sidebar-button" style="top: 604px;">
+                <div data-layer="Rectangle 12" class="rectangle-12"></div>
+                <div data-layer="Quản lí người dùng" class="qun-l-ngi-dng"><span class="qunlngidng_span">Quản lí người dùng</span></div>
+            </a>
+            <a href="{{ url_for('quanlihoatdong') }}" class="sidebar-button" style="top: 721px;">
+                <div data-layer="Rectangle 13" class="rectangle-13"></div>
+                <div data-layer="Quản lí hoạt động" class="qun-l-hot-ng"><span class="qunlhotng_span">Quản lí hoạt động</span></div>
+            </a>
+            <a href="{{ url_for('quanlicacchiendich') }}" class="sidebar-button" style="top: 838px;">
+                <div data-layer="Rectangle 14" class="rectangle-14"></div>
+                <div data-layer="Quản lí các chiến dịch" class="qun-l-cc-chin-dch"><span class="qunlccchindch_span">Quản lí các chiến dịch</span></div>
+            </a>
+
+            <img data-layer="image 2" class="image-2" src="data:image/png;base64,...(dữ liệu ảnh được giữ nguyên)..." />
+            <div data-layer="Slogan gì đó" class="slogan-g-"><span class="slogang_span">Slogan gì đó</span></div>
+
+            <div data-layer="Trang chủ" class="trang-ch"><a href="{{ url_for('home_page') }}">Trang chủ</a></div>
+            <div data-layer="Giới thiệu" class="gii-thiu"><a href="{{ url_for('gioithieu') }}">Giới thiệu</a></div>
+
+            <div class="gioithieu-btn" onclick="toggleThongBao(event)">
+                <div data-layer="Thông báo" class="thng-bo">Thông báo</div>
+                <div id="dropdownThongBao" class="dropdown-thongbao">
+                    </div>
+            </div>
+
+            <div class="profile-container" onclick="toggleProfileMenu(event)">
+                <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="generic-avatar">
+                    <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="62" height="63" rx="31" fill="#EADDFF"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.3009 25.2C40.3009 30.4191 36.1371 34.65 31.0009 34.65C25.8646 34.65 21.7009 30.4191 21.7009 25.2C21.7009 19.9809 25.8646 15.75 31.0009 15.75C36.1371 15.75 40.3009 19.9809 40.3009 25.2ZM37.2009 25.2C37.2009 28.6794 34.425 31.5 31.0009 31.5C27.5767 31.5 24.8009 28.6794 24.8009 25.2C24.8009 21.7206 27.5767 18.9 31.0009 18.9C34.425 18.9 37.2009 21.7206 37.2009 25.2Z" fill="#4F378A"/><path d="M31.0009 39.375C20.9656 39.375 12.4152 45.4047 9.1582 53.8525C9.95164 54.6531 10.7875 55.4103 11.662 56.1205C14.0873 48.3646 21.6958 42.525 31.0009 42.525C40.306 42.525 47.9144 48.3646 50.3398 56.1205C51.2143 55.4104 52.0501 54.6531 52.8435 53.8525C49.5865 45.4048 41.0362 39.375 31.0009 39.375Z" fill="#4F378A"/></svg>
+                </div>
+                <div data-layer="Hương" class="hng"><span class="hng_span">{{ user_details.name | default('User') }}</span></div>
+
+                <div id="dropdownProfile" class="dropdown-profile">
+                    <a href="{{ url_for('thongtincanhan') }}" class="profile-item">Thông tin cá nhân</a>
+                    <a href="{{ url_for('caidat') }}" class="profile-item">Cài đặt</a>
+                    <div class="profile-divider"></div>
+                    <a href="{{ url_for('login') }}" class="profile-item logout">Đăng xuất</a>
+                </div>
+            </div>
+
+            <div data-layer="Cấu hình nền tảng" class="cu-hinh-nn-tang"><span class="cuhinhnntang_span">Thông tin Tài khoản</span></div>
+
+            <div data-layer="Cấu hình máy chủ:" class="cu-hinh-may-chu"><span class="cuhinhmaychu_span">Tên (Tổ chức/User):</span></div>
+            <div data-layer="ABC" class="abc"><span class="abc_span">{{ user_details.bank_name | default(user_details.name, 'N/A') }}</span></div>
+
+            <div data-layer="Giới hạn dung lượng:" class="gii-han-dung-lng"><span class="giihandunglng_span">Mã Ngân hàng (Code):</span></div>
+            <div data-layer="[hăm bíc]" class="hm-bic"><span class="hmbic_span">{{ user_details.bank_code | default('N/A') }}</span></div>
+
+            <div data-layer="Dung lượng trống:" class="dung-lng-trng"><span class="dunglngtrng_span">Người liên hệ:</span></div>
+            <div data-layer="[hăm bíc]" class="hm-bic_01"><span class="hmbic_01_span">{{ user_details.contact_person | default('N/A') }}</span></div>
+
+            <div class="cu-hinh-may-chu" style="top: 500px;"><span class="cuhinhmaychu_span">Email:</span></div>
+            <div class="abc" style="top: 500px;"><span class="abc_span">{{ user_details.email | default('N/A') }}</span></div>
+
+            <div class="cu-hinh-may-chu" style="top: 550px;"><span class="cuhinhmaychu_span">Tên đăng nhập:</span></div>
+            <div class="abc" style="top: 550px;"><span class="abc_span">{{ user_details.account_username | default('N/A') }}</span></div>
+
+            <div class="cu-hinh-may-chu" style="top: 600px;"><span class="cuhinhmaychu_span">Vai trò:</span></div>
+            <div class="abc" style="top: 600px;"><span class="abc_span">{{ user_details.role | default('N/A') }}</span></div>
+
+        </div>
+    </div>
+    <script>
+        // (Giữ nguyên JavaScript của bạn)
+        function toggleThongBao(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownProfile").classList.remove("show");
+            document.getElementById("dropdownThongBao").classList.toggle("show");
+        }
+
+        function toggleProfileMenu(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownThongBao").classList.remove("show");
+            document.getElementById("dropdownProfile").classList.toggle("show");
+        }
+
+        document.addEventListener("click", function(e) {
+            const dropdownThongBao = document.getElementById("dropdownThongBao");
+            const btnThongBao = document.querySelector(".thng-bo");
+
+            const dropdownProfile = document.getElementById("dropdownProfile");
+            const btnProfile = document.querySelector(".profile-container");
+
+            if (btnThongBao && dropdownThongBao && !btnThongBao.contains(e.target) && !dropdownThongBao.contains(e.target)) {
+                dropdownThongBao.classList.remove("show");
+            }
+
+            if (btnProfile && dropdownProfile && !btnProfile.contains(e.target) && !btnProfile.contains(e.target)) {
+                dropdownProfile.classList.remove("show");
+            }
+        });
+    </script>
+</body>
+</html>

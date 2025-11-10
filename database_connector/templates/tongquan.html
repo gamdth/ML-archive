@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tổng quan</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tongquan.css') }}">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="a_f_tongquan">
+
+            <div data-layer="Rectangle 17" class="rectangle-17"></div>
+
+            <div class="search-bar">
+                  <div class="state-layer_01"> <div class="leading-icon"> <div class="content"> <div class="state-layer"> <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                            </svg>
+                          </div> </div> </div> </div>
+                    <div class="content_01"> <div class="a_t_search_chucnang">
+                        <input type="text" class="a_t_search_chucnang_input" placeholder="Tìm kiếm chức năng" /> </div>
+                    </div>
+
+                    <div class="a_icon_search_chucnang"> <div class="instance-1st-trailing-icon"> <div class="content_02"> <div class="state-layer_01"> <div class="icon_01">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                              </svg>
+                            </div> </div> </div> </div> </div> </div>
+            </div>
+
+            <a href="{{ url_for('tongquan') }}" class="sidebar-button" style="top: 370px;">
+                <div data-layer="Rectangle 10" class="rectangle-10" style="background: #FC94AF; opacity: 0.40;"></div>
+                <div data-layer="Tổng quan" class="tng-quan"><span class="tngquan_span">Tổng quan</span></div>
+            </a>
+            <a href="{{ url_for('quanlidulieu') }}" class="sidebar-button" style="top: 487px;">
+                <div data-layer="Rectangle 11" class="rectangle-11"></div>
+                <div data-layer="Quản lí dữ liệu" class="qun-l-d-liu"><span class="qunldliu_span">Quản lí dữ liệu</span></div>
+            </a>
+            <a href="{{ url_for('quanlinguoidung1') }}" class="sidebar-button" style="top: 604px;">
+                <div data-layer="Rectangle 12" class="rectangle-12"></div>
+                <div data-layer="Quản lí người dùng" class="qun-l-ngi-dng"><span class="qunlngidng_span">Quản lí người dùng</span></div>
+            </a>
+            <a href="{{ url_for('quanlihoatdong') }}" class="sidebar-button" style="top: 721px;">
+                <div data-layer="Rectangle 13" class="rectangle-13"></div>
+                <div data-layer="Quản lí hoạt động" class="qun-l-hot-ng"><span class="qunlhotng_span">Quản lí hoạt động</span></div>
+            </a>
+            <a href="{{ url_for('quanlicacchiendich') }}" class="sidebar-button" style="top: 838px;">
+                <div data-layer="Rectangle 14" class="rectangle-14"></div>
+                <div data-layer="Quản lí các chiến dịch" class="qun-l-cc-chin-dch"><span class="qunlccchindch_span">Quản lí các chiến dịch</span></div>
+            </a>
+
+            <img data-layer="image 2" class="image-2" src="data:image/png;base64,...(dữ liệu ảnh được giữ nguyên)..." />
+            <div data-layer="Slogan gì đó" class="slogan-g-"><span class="slogang_span">Slogan gì đó</span></div>
+            <div data-layer="Trang chủ" class="trang-ch"><a href="{{ url_for('home_page') }}">Trang chủ</a></div>
+            <div data-layer="Giới thiệu" class="gii-thiu"><a href="{{ url_for('gioithieu') }}">Giới thiệu</a></div>
+
+            <div class="gioithieu-btn" onclick="toggleThongBao(event)">
+                <div data-layer="Thông báo" class="thng-bo">Thông báo</div>
+                <div id="dropdownThongBao" class="dropdown-thongbao">
+                    </div>
+            </div>
+            <div class="profile-container" onclick="toggleProfileMenu(event)">
+                <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="generic-avatar">
+                    </div>
+                <div data-layer="Hương" class="hng"><span class="hng_span">{{ session.user.name | default('Admin') }}</span></div>
+
+                <div id="dropdownProfile" class="dropdown-profile">
+                    </div>
+            </div>
+
+            <div data-layer="Rectangle 73" class="rectangle-73"></div>
+            <div data-layer="A_TongQuan_T_SoUser" class="a_tongquan_t_souser"><span class="a_tongquan_t_souser_span">{{ stats.total_users }}</span></div>
+
+            <div data-layer="Rectangle 71" class="rectangle-71"></div>
+            <div data-layer="A_TongQuan_T_SoBanGhiDuLieu" class="a_tongquan_t_sobanghidulieu"><span class="a_tongquan_t_sobanghidulieu_span">{{ stats.total_datasets }}</span></div>
+
+            <div data-layer="A_TongQuan_T_SoChienDichHoatDong" class="a_tongquan_t_sochiendichhoatdong"><span class="a_tongquan_t_sochiendichhoatdong_span">{{ stats.total_runs }}</span></div>
+
+            <div data-layer="Rectangle 72" class="rectangle-72"></div>
+
+            <div data-layer="Rectangle 70" class="rectangle-70"></div>
+            <div data-layer="Số User" class="s-user"><span class="suser_span">Số User (Bank)</span></div>
+            <div data-layer="Số bản ghi dữ liệu" class="s-bn-ghi-d-liu"><span class="sbnghidliu_span">Số bản ghi <br/>dữ liệu</span></div>
+            <div data-layer="Số chiến dịch được gợi ý" class="s-chin-dch-c-gi-"><span class="schindchcgi_span">Số chiến dịch <br/>được gợi ý</span></div>
+            <div data-layer="Số chiến dịch hoạt động" class="s-chin-dch-hot-ng"><span class="schindchhotng_span">Số chiến dịch <br/>hoạt động</span></div>
+
+            <div data-layer="A_TongQuan_T_SoChienDichDuocGoiY" class="a_tongquan_t_sochiendichduocgoiy"><span class="a_tongquan_t_sochiendichduocgoiy_span">{{ stats.total_predictions }}</span></div>
+
+            <div data-layer="Rectangle 74" class="rectangle-74">
+                <canvas id="lineChart" style="padding: 15px;"></canvas>
+            </div>
+            <div data-layer="A_TongQuan_T_TenLineChart" class="a_tongquan_t_tenlinechart"><span class="a_tongquan_t_tenlinechart_span">Tần suất cập nhật (Mock Data)</span></div>
+
+            <div data-layer="Rectangle 75" class="rectangle-75">
+                <canvas id="pieChart" style="padding: 15px; max-height: 250px;"></canvas>
+            </div>
+            <div data-layer="A_TongQuan_T_TenPieChart" class="a_tongquan_t_tenpiechart"><span class="a_tongquan_t_tenpiechart_span">Tỉ lệ chiến dịch (Mock Data)</span></div>
+
+            <div data-svg-wrapper data-layer="Ellipse 15" class="ellipse-15">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6.5" cy="6.5" r="6.5" fill="#F6B5C9"/>
+                </svg>
+            </div>
+            <div data-svg-wrapper data-layer="Ellipse 11" class="ellipse-11">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6.5" cy="6.5" r="6.5" fill="#0D0D55"/>
+                </svg>
+            </div>
+            <div data-layer="Chiến dịch không được chọn" class="chin-dch-khng-c-chn"><span class="chindchkhngcchn_span">Chiến dịch <br/>không được chọn</span></div>
+            <div data-layer="Chiến dịch được chọn" class="chin-dch-c-chn"><span class="chindchcchn_span">Chiến dịch <br/>được chọn</span></div>
+
+        </div>
+    </div>
+
+    <script>
+        // --- 1. Vẽ Biểu đồ Đường (Line Chart) ---
+        const lineCtx = document.getElementById('lineChart').getContext('2d');
+        new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: ['Tuần 1', 'Tuần 2', 'Tuần 3', 'Tuần 4'], // Trục X (Mock)
+                datasets: [{
+                    label: 'Số lần cập nhật',
+                    data: [12, 19, 3, 5], // Dữ liệu Y (Mock)
+                    borderColor: '#0D0D55',
+                    backgroundColor: 'rgba(13, 13, 85, 0.1)',
+                    fill: true,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // --- 2. Vẽ Biểu đồ Tròn (Pie Chart) ---
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Chiến dịch được chọn', 'Chiến dịch không được chọn'],
+                datasets: [{
+                    label: 'Tỉ lệ chiến dịch',
+                    data: [70, 30], // Dữ liệu Mock (70% và 30%)
+                    backgroundColor: [
+                        '#0D0D55', // Màu xanh đậm
+                        '#F6B5C9'  // Màu hồng nhạt
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false // Ẩn chú thích (vì bạn đã có chú thích tĩnh)
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        // (Giữ nguyên JavaScript của bạn cho Profile/Notify)
+        function toggleThongBao(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownProfile").classList.remove("show");
+            document.getElementById("dropdownThongBao").classList.toggle("show");
+        }
+
+        function toggleProfileMenu(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownThongBao").classList.remove("show");
+            document.getElementById("dropdownProfile").classList.toggle("show");
+        }
+
+        document.addEventListener("click", function(e) {
+            const dropdownThongBao = document.getElementById("dropdownThongBao");
+            const btnThongBao = document.querySelector(".thng-bo");
+
+            const dropdownProfile = document.getElementById("dropdownProfile");
+            const btnProfile = document.querySelector(".profile-container");
+
+            if (btnThongBao && dropdownThongBao && !btnThongBao.contains(e.target) && !dropdownThongBao.contains(e.target)) {
+                dropdownThongBao.classList.remove("show");
+            }
+
+            if (btnProfile && dropdownProfile && !btnProfile.contains(e.target) && !btnProfile.contains(e.target)) {
+                dropdownProfile.classList.remove("show");
+            }
+        });
+    </script>
+</body>
+</html>

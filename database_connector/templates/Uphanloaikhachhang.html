@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phân loại khách hàng</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Uphanloaikhachhang.css') }}">
+
+    <style>
+        .results-container {
+            position: absolute;
+            top: 300px;
+            left: 350px;
+            right: 50px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            font-family: Arial, sans-serif;
+            color: #333;
+            z-index: 100;
+            margin-bottom: 50px;
+        }
+        .styled-table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        .styled-table .churn-high {
+            font-weight: bold;
+            color: #D9534F;
+        }
+        .styled-table .churn-medium {
+            color: #F0AD4E;
+        }
+        .styled-table .churn-low {
+            color: #5CB85C;
+        }
+        .search-sort-form {
+            position: absolute;
+            top: 230px;
+            left: 350px;
+            right: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 101;
+            font-family: Arial, sans-serif;
+        }
+        .search-sort-form input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 300px;
+        }
+        .search-sort-form select {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-sort-form button {
+            padding: 9px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .flash-message {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+        .flash-error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="a_f_quanlinguoidung1">
+
+            <div data-layer="Rectangle 17" class="rectangle-17"></div>
+
+            <div class="search-bar">
+                  <div class="state-layer_01"> <div class="leading-icon"> <div class="content"> <div class="state-layer"> <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                            </svg>
+                          </div> </div> </div> </div>
+                    <div class="content_01"> <div class="a_t_search_chucnang">
+                        <input type="text" class="a_t_search_chucnang_input" placeholder="Tìm kiếm chức năng" /> </div>
+                    </div>
+
+                    <div class="a_icon_search_chucnang"> <div class="instance-1st-trailing-icon"> <div class="content_02"> <div class="state-layer_01"> <div class="icon_01">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="var(--Schemes-On-Surface-Variant, #49454F)"/>
+                              </svg>
+                            </div> </div> </div> </div> </div> </div>
+            </div>
+            <a href="{{ url_for('Uquanlidulieu') }}" class="sidebar-button" style="top: 370px;">
+                <div data-layer="Rectangle 10" class="rectangle-10"></div>
+                <div data-layer="Tổng quan" class="tng-quan"><span class="tngquan_span">Quản lí dữ liệu</span></div>
+            </a>
+            <a href="{{ url_for('Uthongke') }}" class="sidebar-button" style="top: 487px;">
+                <div data-layer="Rectangle 11" class="rectangle-11"></div>
+                <div data-layer="Quản lí dữ liệu" class="qun-l-d-liu"><span class="qunldliu_span">Thống kê</span></div>
+            </a>
+            <a href="{{ url_for('Uphanloaikhachhang') }}" class="sidebar-button" style="top: 604px;">
+                <div data-layer="Rectangle 12" class="rectangle-12" style="background: #FC94AF; opacity: 0.60;"></div>
+                <div data-layer="Quản lí người dùng" class="qun-l-ngi-dng"><span class="qunlngidng_span">Phân loại khách hàng</span></div>
+            </a>
+            <a href="{{ url_for('Uchienluocgoiytudong') }}" class="sidebar-button" style="top: 721px;">
+                <div data-layer="Rectangle 13" class="rectangle-13"></div>
+                <div data-layer="Quản lí hoạt động" class="qun-l-hot-ng"><span class="qunlhotng_span">Chiến lược gợi ý tự động</span></div>
+            </a>
+            <a href="{{ url_for('Utoiuuhoachiendich') }}" class="sidebar-button" style="top: 838px;">
+                <div data-layer="Rectangle 14" class="rectangle-14"></div>
+                <div data-layer="Quản lí các chiến dịch" class="qun-l-cc-chin-dch"><span class="qunlccchindch_span">Tối ưu hóa chiến dịch</span></div>
+            </a>
+
+            <img data-layer="image 2" class="image-2" src="data:image/png;base64,...(dữ liệu ảnh được giữ nguyên)..." />
+            <div data-layer="Slogan gì đó" class="slogan-g-"><span class="slogang_span">Slogan gì đó</span></div>
+            <div data-layer="Trang chủ" class="trang-ch"><a href="{{ url_for('uhome_page') }}">Trang chủ</a></div>
+            <div data-layer="Giới thiệu" class="gii-thiu"><a href="{{ url_for('gioithieu') }}">Giới thiệu</a></div>
+
+            <div class="gioithieu-btn" onclick="toggleThongBao(event)">
+                <div data-layer="Thông báo" class="thng-bo">Thông báo</div>
+                <div id="dropdownThongBao" class="dropdown-thongbao">
+                    </div>
+            </div>
+            <div class="profile-container" onclick="toggleProfileMenu(event)">
+                <div data-svg-wrapper data-layer="Generic avatar" data-style="Avatar" class="generic-avatar">
+                    </div>
+                <div data-layer="Hương" class="hng"><span class="hng_span">Hương</span></div>
+                <div id="dropdownProfile" class="dropdown-profile">
+                    </div>
+            </div>
+
+            <form class="search-sort-form" action="{{ url_for('Uphanloaikhachhang') }}" method="GET">
+
+                <input type="text" name="q" value="{{ search_query | default('') }}" placeholder="Tìm kiếm khách hàng (theo ID)...">
+
+                <div>
+                    <select name="sort_by">
+                        <option value="churn_probability" {% if sort_by == 'churn_probability' %}selected{% endif %}>Sắp xếp (Rủi ro Churn)</option>
+                        <option value="customer_id" {% if sort_by == 'customer_id' %}selected{% endif %}>Customer ID</option>
+                        <option value="credit_score" {% if sort_by == 'credit_score' %}selected{% endif %}>Điểm tín dụng</option>
+                        <option value="balance" {% if sort_by == 'balance' %}selected{% endif %}>Số dư (Balance)</option>
+                        <option value="estimated_salary" {% if sort_by == 'estimated_salary' %}selected{% endif %}>Lương (Salary)</option>
+                        <option value="age" {% if sort_by == 'age' %}selected{% endif %}>Tuổi (Age)</option>
+                    </select>
+
+                    <select name="sort_order" style="margin-left: 10px;">
+                        <option value="DESC" {% if sort_order == 'DESC' %}selected{% endif %}>Giảm dần</option>
+                        <option value="ASC" {% if sort_order == 'ASC' %}selected{% endif %}>Tăng dần</option>
+                    </select>
+                </div>
+
+                <button type="submit">Lọc</button>
+            </form>
+
+            <div class="results-container">
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="flash-message flash-{{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <h3>Kết quả Phân loại Khách hàng (Dự đoán mới nhất)</h3>
+
+                {% if results %}
+                    <p>Tìm thấy {{ results | length }} khách hàng.</p>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Xác suất Churn</th>
+                                <th>Customer ID</th>
+                                <th>Điểm Tín Dụng</th> <th>Quốc gia</th>
+                                <th>Giới tính</th>
+                                <th>Tuổi</th>
+                                <th>Tenure</th> <th>Số dư (Balance)</th>
+                                <th>Lương (Salary)</th>
+                                <th>Số SP</th>
+                                <th>Có thẻ TD</th>
+                                <th>Active</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in results %}
+                                <tr>
+                                    {% set prob = row.churn_probability %}
+                                    {% if prob > 0.7 %}
+                                        <td class="churn-high">{{ (prob * 100) | round(2) }}%</td>
+                                    {% elif prob > 0.4 %}
+                                        <td class="churn-medium">{{ (prob * 100) | round(2) }}%</td>
+                                    {% else %}
+                                        <td class="churn-low">{{ (prob * 100) | round(2) }}%</td>
+                                    {% endif %}
+
+                                    <td>{{ row.customer_id }}</td>
+                                    <td>{{ row.credit_score }}</td> <td>{{ row.country }}</td>
+                                    <td>{{ row.gender }}</td>
+                                    <td>{{ row.age }}</td>
+                                    <td>{{ row.tenure }}</td> <td>{{ "{:,.2f}".format(row.balance) }}</td>
+                                    <td>{{ "{:,.2f}".format(row.estimated_salary) }}</td>
+                                    <td>{{ row.products_number }}</td>
+                                    <td>{{ 'Có' if row.credit_card else 'Không' }}</td>
+                                    <td>{{ 'Có' if row.active_member else 'Không' }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>Không tìm thấy kết quả nào khớp. Vui lòng thử lại hoặc upload một dataset dự đoán mới.</p>
+                {% endif %}
+            </div>
+
+        </div> </div> <script>
+    // (Giữ nguyên JavaScript của bạn)
+    function toggleThongBao(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownProfile").classList.remove("show");
+            document.getElementById("dropdownThongBao").classList.toggle("show");
+        }
+
+        function toggleProfileMenu(event) {
+            event.stopPropagation();
+            document.getElementById("dropdownThongBao").classList.remove("show");
+            document.getElementById("dropdownProfile").classList.toggle("show");
+        }
+
+        document.addEventListener("click", function(e) {
+            const dropdownThongBao = document.getElementById("dropdownThongBao");
+            const btnThongBao = document.querySelector(".thng-bo");
+
+            const dropdownProfile = document.getElementById("dropdownProfile");
+            const btnProfile = document.querySelector(".profile-container");
+
+            if (btnThongBao && dropdownThongBao && !btnThongBao.contains(e.target) && !dropdownThongBao.contains(e.target)) {
+                dropdownThongBao.classList.remove("show");
+            }
+
+            if (btnProfile && dropdownProfile && !btnProfile.contains(e.target) && !dropdownProfile.contains(e.target)) {
+                dropdownProfile.classList.remove("show");
+            }
+        });
+</script>
+
+</body>
+</html>
